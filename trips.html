@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e9ede6">
+  <title>Зимние маршруты — турклуб «Тропа»</title>
+  <meta name="description" content="Шесть зимних маршрутов турклуба «Тропа»: водопады, снегоступы, горные рассветы и новогодняя изба. Выберите поход по сложности и длительности.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Найди свою тропу — зимние маршруты">
+  <meta property="og:description" content="Шесть идей для зимы на доске турклуба «Тропа». Походы на один день и путешествия подольше.">
+  <meta property="og:image" content="img/trips/og-trips.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Пробковая доска с зимними маршрутами турклуба «Тропа»">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/RussoOne-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/trips.css">
+  <script src="js/trips.js" defer></script>
+</head>
+<body class="trips-page">
+  <a class="skip-link" href="#main">Перейти к маршрутам</a>
+  <header class="site-header trips-header">
+    <a class="brand" href="index.html" aria-label="Тропа — главная">
+      <img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня">
+    </a>
+    <nav class="main-nav" aria-label="Главная навигация">
+      <a href="index.html#club">О клубе</a>
+      <a class="nav-routes" href="trips.html" aria-current="page">Маршруты <span aria-hidden="true">↗</span></a>
+      <a href="index.html#safety">Безопасность</a>
+    </nav>
+    <a class="trips-home" href="index.html"><span aria-hidden="true">←</span> На главную</a>
+  </header>
+
+  <main class="trips-main" id="main">
+    <div class="trips-forest" aria-hidden="true"></div>
+    <section class="trips-intro" aria-labelledby="trips-title">
+      <p class="eyebrow"><span class="small-rule"></span> Тропа / Зимние маршруты</p>
+      <h1 id="trips-title">Найди свою <span>тропу.</span></h1>
+      <p>На день из города. Или чуть дальше.<br>Выбери историю, в которую хочется отправиться.</p>
+    </section>
+
+    <div class="trips-scene">
+      <div class="board-companion" aria-hidden="true">
+        <span class="companion-note">Ну что,<br>куда пойдём?</span>
+        <svg class="board-hiker" viewBox="0 0 130 210" fill="none">
+          <ellipse cx="63" cy="199" rx="48" ry="8" fill="#294236" opacity=".16"/>
+          <g transform="translate(62 180) scale(1.8)">
+            <path d="m-9-20-3 24" stroke="#293e3d" stroke-width="10" stroke-linecap="round"/>
+            <path d="m-13 4-7 2" stroke="#263736" stroke-width="7" stroke-linecap="round"/>
+            <path d="m8-20 6 23" stroke="#293e3d" stroke-width="10" stroke-linecap="round"/>
+            <path d="m14 3 8 1" stroke="#263736" stroke-width="7" stroke-linecap="round"/>
+            <path d="m-16-49-10 25m40-25 12 20 4-8" stroke="#c8bfa2" stroke-width="9" stroke-linecap="round"/>
+            <path d="m-26-23-6 32m60-44 5 44" stroke="#50605a" stroke-width="2" stroke-linecap="round"/>
+            <path d="M-15-52Q1-62 14-52l4 32h-38Z" fill="#d6cbb0"/>
+            <path d="M-3-63v9H8v-9" fill="#c6a68a"/>
+            <g transform="translate(4 -1) rotate(12 0 -68)">
+              <circle cy="-68" r="11" fill="#bb997b"/>
+              <path d="m10-70 3 4-3 2" fill="#bb997b"/>
+              <path d="M-12-66v-5a12 12 0 0 1 24 0v5Z" fill="#d8d4bc"/>
+              <path d="M-13-66h27" stroke="#a6a98d" stroke-width="4" stroke-linecap="round"/>
+            </g>
+            <path d="M-10-57q8-6 16 0" stroke="#823c32" stroke-width="3"/>
+            <rect x="-20" y="-54" width="36" height="39" rx="10" fill="#bd4034"/>
+            <path d="M-18-43h32" stroke="#983a31" stroke-width="2"/>
+            <rect x="-14" y="-36" width="24" height="16" rx="5" fill="#d04b3c"/>
+            <path d="M-12-53v8m20-8v8" stroke="#e9a17e" stroke-width="3"/>
+            <path d="m-22-39-2 16m41-16 2 16" stroke="#8d3c32" stroke-width="5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+
+      <section class="route-board" aria-label="Доска зимних маршрутов">
+        <div class="board-roof" aria-hidden="true"></div>
+        <div class="board-post board-post-left" aria-hidden="true"></div>
+        <div class="board-post board-post-right" aria-hidden="true"></div>
+        <div class="board-cork">
+          <div class="board-heading">
+            <span class="board-caption">Хорошие выходные начинаются здесь</span>
+            <span class="board-season">ЗИМА / 2026—27</span>
+          </div>
+
+          <div class="trip-filters" id="trip-filters" hidden>
+            <div class="filter-field">
+              <label for="trip-difficulty">Сложность</label>
+              <select id="trip-difficulty" aria-controls="trip-papers">
+                <option value="all">Любая</option>
+                <option value="easy">Легко</option>
+                <option value="moderate">Средне</option>
+                <option value="hard">Сложно</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label for="trip-duration">Длительность</label>
+              <select id="trip-duration" aria-controls="trip-papers">
+                <option value="all">Любая</option>
+                <option value="1">1 день</option>
+                <option value="2">2 дня</option>
+                <option value="3">3 дня</option>
+              </select>
+            </div>
+            <button class="filter-reset" type="button" data-reset-filters>Сбросить <span aria-hidden="true">↺</span></button>
+          </div>
+          <p class="trip-result" id="trip-result" role="status" aria-live="polite" aria-atomic="true">6 маршрутов · выбирай по своему ритму</p>
+
+          <div class="trip-papers" id="trip-papers">
+            <article class="trip-paper" data-difficulty="easy" data-days="1" aria-labelledby="waterfalls-title">
+              <span class="paper-pin" aria-hidden="true"></span>
+              <div class="paper-topline"><span>Маршрут 01</span><span class="difficulty difficulty-easy"><i aria-hidden="true"></i> Легко</span></div>
+              <figure class="trip-photo">
+                <img src="img/trips/waterfalls.webp" width="600" height="400" alt="Зимний водопад среди скал и деревьев, обрамлённый льдом" fetchpriority="high">
+                <figcaption>Фотоиллюстрация</figcaption>
+              </figure>
+              <h2 id="waterfalls-title">Ледяные водопады</h2>
+              <div class="trip-facts"><span><svg aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/><path d="M10 5v5l3 2"/></svg> 1 день</span><strong>3 500 <span>₽</span></strong></div>
+              <p class="trip-included"><span>В стоимости</span>Два инструктора, трансфер от ж/д вокзала, групповое снаряжение и страховка от несчастного случая.</p>
+              <a class="booking-placeholder" role="link" aria-disabled="true">Забронировать <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="trip-paper" data-difficulty="easy" data-days="1" aria-labelledby="snowshoes-title">
+              <span class="paper-pin" aria-hidden="true"></span>
+              <div class="paper-topline"><span>Маршрут 02</span><span class="difficulty difficulty-easy"><i aria-hidden="true"></i> Легко</span></div>
+              <figure class="trip-photo">
+                <img class="photo-snowshoes" src="img/trips/snowshoes.webp" width="600" height="900" alt="Снегоступы на ногах туриста на белом снегу" loading="lazy" decoding="async">
+                <figcaption>Фотоиллюстрация</figcaption>
+              </figure>
+              <h2 id="snowshoes-title">Снегоступы<br>для начинающих</h2>
+              <div class="trip-facts"><span><svg aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/><path d="M10 5v5l3 2"/></svg> 1 день</span><strong>2 900 <span>₽</span></strong></div>
+              <p class="trip-included"><span>В стоимости</span>Два инструктора, трансфер от ж/д вокзала, групповое снаряжение и страховка от несчастного случая.</p>
+              <a class="booking-placeholder" role="link" aria-disabled="true">Забронировать <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="trip-paper" data-difficulty="moderate" data-days="1" aria-labelledby="sunrise-title">
+              <span class="paper-pin" aria-hidden="true"></span>
+              <div class="paper-topline"><span>Маршрут 03</span><span class="difficulty difficulty-moderate"><i aria-hidden="true"></i> Средне</span></div>
+              <figure class="trip-photo">
+                <img src="img/trips/sunrise.webp" width="600" height="400" alt="Снежные горные вершины в тёплом свете рассвета" loading="lazy" decoding="async">
+                <figcaption>Фотоиллюстрация</figcaption>
+              </figure>
+              <h2 id="sunrise-title">Рассвет<br>на Седой горе</h2>
+              <div class="trip-facts"><span><svg aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/><path d="M10 5v5l3 2"/></svg> 1 день</span><strong>3 900 <span>₽</span></strong></div>
+              <p class="trip-included"><span>В стоимости</span>Два инструктора, трансфер от ж/д вокзала, групповое снаряжение и страховка от несчастного случая.</p>
+              <a class="booking-placeholder" role="link" aria-disabled="true">Забронировать <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="trip-paper" data-difficulty="moderate" data-days="2" aria-labelledby="plateau-title">
+              <span class="paper-pin" aria-hidden="true"></span>
+              <div class="paper-topline"><span>Маршрут 04</span><span class="difficulty difficulty-moderate"><i aria-hidden="true"></i> Средне</span></div>
+              <figure class="trip-photo">
+                <img src="img/trips/plateau.webp" width="600" height="400" alt="Туристы пересекают заснеженное плато под голубым небом" loading="lazy" decoding="async">
+                <figcaption>Фотоиллюстрация</figcaption>
+              </figure>
+              <h2 id="plateau-title">Снежное плато</h2>
+              <div class="trip-facts"><span><svg aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/><path d="M10 5v5l3 2"/></svg> 2 дня</span><strong>7 900 <span>₽</span></strong></div>
+              <p class="trip-included"><span>В стоимости</span>Два инструктора, трансфер от ж/д вокзала, групповое снаряжение, страховка от несчастного случая и горячее питание.</p>
+              <a class="booking-placeholder" role="link" aria-disabled="true">Забронировать <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="trip-paper" data-difficulty="hard" data-days="3" aria-labelledby="ski-title">
+              <span class="paper-pin" aria-hidden="true"></span>
+              <div class="paper-topline"><span>Маршрут 05</span><span class="difficulty difficulty-hard"><i aria-hidden="true"></i> Сложно</span></div>
+              <figure class="trip-photo">
+                <img src="img/trips/ski.webp" width="600" height="400" alt="Два лыжника идут по снежному склону на фоне гор" loading="lazy" decoding="async">
+                <figcaption>Фотоиллюстрация</figcaption>
+              </figure>
+              <h2 id="ski-title">Лыжный траверс</h2>
+              <div class="trip-facts"><span><svg aria-hidden="true" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/><path d="M10 5v5l3 2"/></svg> 3 дня</span><strong>11 500 <span>₽</span></strong></div>
+              <p class="trip-included"><span>В стоимости</span>Два инструктора, трансфер от ж/д вокзала, групповое снаряжение, страховка от несчастного случая и горячее питание.</p>
+              <a class="booking-placeholder" role="link" aria-disabled="true">Забронировать <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="trip-paper" data-difficulty="easy" data-days="3" aria-labelledby="cabin-title">
+              <span class="paper-pin" aria-hidden="true"></span>
+              <div class="paper-topline"><span>Маршрут 06</span><span class="difficulty difficulty-easy"><i aria-hidden="true"></i> Легко</span></div>
+              <figure class="trip-photo">
+                <img class="photo-cabin" src="img/trips/cabin.webp" width="600" height="840" alt="Деревянная изба среди елей, покрытых снегом" loading="lazy" decoding="async">
+                <figcaption>Фотоиллюстрация</figcaption>
+              </figure>
+              <h2 id="cabin-title">Новогодняя изба</h2>
+              <div class="trip-facts"><span><svg aria-hidden="true" viewBox="0 0 20 20"><rect x="3" y="5" width="14" height="12" rx="1"/><path d="M3 9h14M7 3v4m6-4v4"/></svg> 31.12–02.01</span><strong>15 900 <span>₽</span></strong></div>
+              <p class="trip-included"><span>В стоимости</span>Два инструктора, трансфер от ж/д вокзала, групповое снаряжение, страховка от несчастного случая и горячее питание.</p>
+              <a class="booking-placeholder" role="link" aria-disabled="true">Забронировать <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+
+          <div class="trips-empty" id="trips-empty" hidden>
+            <span aria-hidden="true">↗</span>
+            <h2>Здесь пока нет тропы</h2>
+            <p>По этим условиям маршрутов не нашлось.<br>Попробуй другую сложность или длительность.</p>
+            <button type="button" class="empty-reset" data-reset-filters>Показать все маршруты</button>
+          </div>
+          <div class="board-bottom"><span>Личное снаряжение — в аренду отдельно.</span><span>До 16 человек в группе</span></div>
+        </div>
+      </section>
+    </div>
+    <p class="trips-footnote">Фотографии передают настроение походов и служат иллюстрациями.<br>Бронирование на этой странице пока недоступно.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="brand footer-brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня" loading="lazy"></a>
+      <p class="footer-address">г. Новоозёрск<br>ул. Таёжная, д. 3, офис 2</p>
+      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a></div>
+    </div>
+    <div class="footer-bottom"><a href="privacy.html">Политика конфиденциальности</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
+  </footer>
+</body>
+</html>
