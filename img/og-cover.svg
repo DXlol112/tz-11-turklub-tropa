@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#eef2ec"/>
+  <path d="m340 630 186-230 104 70 120-190 118 120 126-192 206 318v104Z" fill="#d3dfd2"/>
+  <path d="m500 630 132-215 117-111 110-180 124 183 217 323Z" fill="#c2cfbd"/>
+  <path d="m859 124 14 177-48 80 77 128-17 121h315L983 307Z" fill="#8fa99c"/>
+  <path d="m859 124-68 111 42-12 30 21 12-46 30 25 29-3Z" fill="#fafbf6"/>
+  <path d="M780 630c-50-78 180-87 90-150s-80-89 8-145c59-37-61-51-19-207" fill="none" stroke="#f7f8ed" stroke-width="4" stroke-dasharray="4 12"/>
+  <path d="M860 124V37" stroke="#455b57" stroke-width="3"/>
+  <path d="M860 43H749l13 20-13 20h111Z" fill="#b83e32"/>
+  <text x="70" y="98" font-family="Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="6" fill="#2b6f8f">ТРОПА</text>
+  <text x="70" y="260" font-family="Arial,sans-serif" font-weight="700" font-size="76" letter-spacing="-3" fill="#1f2a30">Выше гор.</text>
+  <text x="70" y="345" font-family="Arial,sans-serif" font-weight="700" font-size="76" letter-spacing="-3" fill="#3d6556">Ближе к себе.</text>
+  <text x="74" y="414" font-family="Arial,sans-serif" font-size="20" fill="#52655d">Походы выходного дня · Новоозёрск</text>
+  <text x="74" y="563" font-family="Arial,sans-serif" font-size="14" letter-spacing="2" fill="#52655d">ТВОЯ ТРОПА НАЧИНАЕТСЯ ЗДЕСЬ ↗</text>
+</svg>
