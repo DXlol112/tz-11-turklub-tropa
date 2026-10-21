@@ -65,7 +65,7 @@
 .trip-facts strong span{font-size:13px;font-weight:500}
 .trip-included{font-size:11px;line-height:1.7;color:#586150;margin:13px 0 17px;min-height:112px}
 .trip-included>span{display:block;font-size:9px;letter-spacing:.7px;text-transform:uppercase;color:#3c4f3f;font-weight:600;margin-bottom:5px}
-.booking-placeholder{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;border:1px solid #61735e;padding:10px 12px;color:#38513e;font-size:11px;font-weight:600;cursor:default}
+.booking-placeholder{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;border:1px solid #61735e;padding:10px 12px;color:#38513e;font-size:11px;font-weight:600;cursor:pointer}
 .booking-placeholder>span{font-size:17px;font-weight:400}
 .board-bottom{display:flex;justify-content:space-between;gap:18px;border-top:1px solid #634a3347;padding-top:19px;margin-top:12px;color:#473c2d;font-size:10px}
 .trips-empty{text-align:center;background:#faf8f0;padding:45px 20px;margin:10px auto 30px;max-width:550px;box-shadow:0 5px 15px #51392129}
@@ -177,3 +177,5 @@
   .trip-photo{max-width:250px}
   .trips-empty{display:none!important}
 }
+
+.booking-placeholder:hover{background:#e9eddf}
