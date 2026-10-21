@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/trips.css">
   <link rel="stylesheet" href="css/contracts.css">
+  <script src="js/schedule.js" defer></script>
   <script src="js/contracts.js" defer></script>
 </head>
 <body class="trips-page contracts-page">
@@ -27,8 +28,8 @@
       <img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня">
     </a>
     <nav class="main-nav" aria-label="Главная навигация">
-      <a href="index.html#club">О клубе</a>
       <a class="nav-routes" href="trips.html">Маршруты <span aria-hidden="true">↗</span></a>
+      <a href="calendar.html">Календарь</a>
       <a href="contracts.html" aria-current="page">Бронь и контакты</a>
     </nav>
     <a class="trips-home" href="trips.html"><span aria-hidden="true">←</span> К маршрутам</a>
@@ -106,7 +107,9 @@
                 </div>
                 <div class="booking-field">
                   <label for="booking-date">Дата выезда</label>
-                  <input id="booking-date" name="trip_date" type="text" placeholder="ДД.ММ.ГГГГ" maxlength="10" required data-validate aria-describedby="booking-date-error">
+                  <input id="booking-date" name="trip_date" type="text" placeholder="Дата не выбрана" readonly required data-validate aria-describedby="booking-date-error">
+                  <a class="choose-date" id="choose-date" href="calendar.html">Выбрать дату <span aria-hidden="true">↗</span></a>
+                  <p class="booking-notice" id="draft-notice" role="status" hidden></p>
                   <p class="field-error" id="booking-date-error"></p>
                 </div>
                 <div class="booking-field">
@@ -136,7 +139,7 @@
                 <div><dt>Предоплата · 30 %</dt><dd id="booking-deposit">—</dd></div>
               </dl>
               <div class="booking-terms">
-                <p>Аренда личного снаряжения оплачивается отдельно. Дату выезда необходимо согласовать с клубом. «Новогодняя изба»: 31.12–02.01.</p>
+                <p>Аренда личного снаряжения оплачивается отдельно. Расписание и свободные места — учебные; дату необходимо подтвердить у клуба. «Новогодняя изба»: 31.12–02.01.</p>
                 <p>Бронь — после предоплаты 30 %. Отмена за 7 дней — возврат предоплаты.</p>
                 <p>Участники от 18 лет; с 12 лет — в походах «легко» вместе с родителем.</p>
               </div>
@@ -151,9 +154,9 @@
                 </div>
               </div>
               <button class="booking-submit" id="booking-submit" type="button" disabled>Отправить заявку <span aria-hidden="true">↗</span></button>
-              <p class="booking-notice">Приём заявок через сайт пока недоступен. Для бронирования свяжитесь с клубом.</p>
+              <p class="booking-notice">Демонстрационная форма. После проверки откроется страница «Спасибо», заявка не будет отправлена. Для бронирования свяжитесь с клубом.</p>
               <p class="booking-status" id="booking-status" role="status" aria-live="polite" aria-atomic="true"></p>
-              <noscript><p class="booking-notice">Для расчёта стоимости и проверки полей включите JavaScript. Контакты клуба доступны ниже.</p></noscript>
+              <noscript><p class="booking-notice">Для выбора даты, расчёта и проверки формы включите JavaScript. Расписание и контакты доступны в календаре; отправка отключена.</p></noscript>
             </form>
             <div class="booking-contacts" aria-label="Контакты клуба">
               <div class="booking-contact-links"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a></div>

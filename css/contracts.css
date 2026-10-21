@@ -52,3 +52,5 @@
   .booking-contact-links{display:block}.booking-contact-links a{display:flex;font-size:11px}
 }
 @media print{.booking-paper{transform:none;box-shadow:none;border:1px solid #999}.booking-submit,.booking-notice,.booking-status{display:none}.booking-paper{max-width:none;margin:20px 0}}
+
+.choose-date{display:flex;justify-content:space-between;align-items:center;min-height:44px;margin-top:8px;padding:8px 12px;border:1px solid #7c8d70;font-size:12px}.choose-date:hover{background:#e9eddf}.booking-field input[readonly]{background:#f0f0e5;cursor:default}
