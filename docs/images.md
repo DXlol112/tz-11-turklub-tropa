@@ -26,6 +26,32 @@ https://unsplash.com/license. Она разрешает загрузку, изм
 
 Дерево, пробка, канцелярские кнопки и персонаж — CSS/SVG-графика проекта.
 Персонаж адаптирован из иллюстрации главной страницы.
+
+## Снаряжение
+
+Фотографии для `gear.html` загружены 21.10.2026 с Wikimedia Commons и
+сохранены локально в `img/gear/`. Каждый WebP меньше 300 КБ, длинная сторона
+не больше 720 px. Это иллюстрации типов предметов, а не моделей проката клуба;
+температурный режим спальника на фото не заявляется. Источники и лицензии
+также доступны посетителю в раскрывающемся блоке под дверцей холодильника.
+
+| Файл | Автор | Источник | Лицензия |
+| --- | --- | --- | --- |
+| `sleeping-bag.webp` | Smack | [Mummy bag](https://commons.wikimedia.org/wiki/File:Mummy_bag.jpg) | Public domain |
+| `tent.webp` | Paste | [Dome tent](https://commons.wikimedia.org/wiki/File:Dome_tent.JPG) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
+| `snowshoes.webp` | Willmcw | [Atlas snowshoes](https://commons.wikimedia.org/wiki/File:Atlas_snowshoes.jpg) | Public domain |
+| `mat.webp` | Pierrelagrange | [Self-inflating mat](https://commons.wikimedia.org/wiki/File:Self-inflating_mat.jpg) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) |
+| `stove.webp` | Gvjekoslav | [Gas stove cooking](https://commons.wikimedia.org/wiki/File:Gas_stove_cooking.jpg) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| `poles.webp` | Sarang | [Retracted trekking poles](https://commons.wikimedia.org/wiki/File:Retracted_trekking_poles.jpg) | Public domain |
+
+Изменения: уменьшение разрешения, преобразование в WebP; отображение и
+кадрирование через CSS. Производные изображения сохраняют лицензию оригинала.
+Дверца, самоклейки, лист и калькулятор созданы средствами CSS.
+`og-gear.jpg` — собственная графика проекта 1200 × 630, без сторонних фотографий.
+
+Сегментные шрифты DSEG7 Classic Italic и DSEG14 Classic Italic (v0.46) —
+[keshikan/DSEG](https://github.com/keshikan/DSEG), SIL Open Font License 1.1.
+Файлы находятся в `fonts/`, текст лицензии — `fonts/DSEG-LICENSE.txt`.
 `og-trips.jpg` — локальное изображение страницы для Open Graph (1200 × 630).
 
 ## Шрифты
