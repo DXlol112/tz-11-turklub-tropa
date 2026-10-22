@@ -1,5 +1,32 @@
 # Фотографии страницы маршрутов
 
+## Инструкторы и новые иллюстрации — 22.10.2026
+
+Фотографии инструкторов используются как иллюстрации вымышленных учебных профилей.
+Изображённые люди не представлены сотрудниками клуба; пояснение есть на главной
+и странице инструкторов. Фотографии загружены локально, преобразованы в WebP
+и кадрируются через CSS. Все три файла меньше 55 КБ.
+
+| Файл | Автор | Страница источника | Лицензия |
+| --- | --- | --- | --- |
+| `img/guides/anna.webp` | Kristijan Arsov | [A person with a backpack on a mountain](https://unsplash.com/photos/a-person-with-a-backpack-on-a-mountain-URwxiTBU0po) | Unsplash License |
+| `img/guides/mikhail.webp` | Spencer Backman | [Man wearing black jacket standing on mountain](https://unsplash.com/photos/man-wearing-black-jacket-standing-on-mountain-5DcvcczzYg0) | Unsplash License |
+| `img/guides/elena.webp` | Diana Shchurova | [A woman with a backpack is hiking through the woods](https://unsplash.com/photos/a-woman-with-a-backpack-is-hiking-through-the-woods-z9vKvuJjBsU) | Unsplash License |
+
+На страницах источников указано бесплатное использование по
+[Unsplash License](https://unsplash.com/license), не Unsplash+.
+Прямые исходники: `photo-1665939361425-605ca174fe80`,
+`photo-1513382848136-770cf055a751`, `photo-1683527272896-3e05e4503085`
+на images.unsplash.com. Максимальное разрешение локальных файлов: 800 × 1000.
+
+`img/guides/og-guides.jpg` — снимок собственной вёрстки с указанными выше
+фотографиями. `img/og-404.jpg` — снимок собственной SVG-сцены. Оба файла
+1200 × 630 и меньше 300 КБ. Персонаж 404 заимствован из SVG главной страницы;
+камни, тропа и деревья нарисованы в коде. `img/meeting-map.svg` — собственная
+условная схема; это не картографические данные Яндекса и не навигационная карта.
+
+## Маршруты
+
 Все фотографии загружены 20.10.2026 и хранятся локально в `img/trips/`.
 Браузер посетителя не обращается к Unsplash. Это фотоиллюстрации похожих
 пейзажей, а не фотографии маршрутов вымышленного турклуба из учебного ТЗ.

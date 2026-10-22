@@ -19,20 +19,15 @@
   <link rel="stylesheet" href="css/trips.css">
   <link rel="stylesheet" href="css/thanks.css">
   
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body class="trips-page thanks-page">
   <a class="skip-link" href="#main">Перейти к благодарности</a>
-  <header class="site-header trips-header">
-    <a class="brand" href="index.html" aria-label="Тропа — главная">
-      <img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня">
-    </a>
-    <nav class="main-nav" aria-label="Главная навигация">
-      <a class="nav-routes" href="trips.html">Маршруты <span aria-hidden="true">↗</span></a>
-      <a href="calendar.html">Календарь</a>
-      <a href="contracts.html">Бронь и контакты</a>
-      <a class="nav-gear" href="gear.html">Снаряжение</a>
-    </nav>
-    <a class="trips-home" href="trips.html"><span aria-hidden="true">←</span> К маршрутам</a>
+  <header class="site-header unified-header">
+    <a class="brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня"></a>
+    <nav class="main-nav desktop-nav" aria-label="Главная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a></nav>
+    <a class="header-phone" href="tel:+79001111131">+7 (900) 111-11-31</a>
+    <details class="mobile-menu"><summary>Меню</summary><nav class="mobile-nav" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a><a href="tel:+79001111131">+7 (900) 111-11-31</a></nav></details>
   </header>
 
   <main class="trips-main" id="main">
@@ -101,14 +96,14 @@
       </section>
     </div>
   </main>
-
   <footer class="site-footer">
     <div class="footer-main">
       <a class="brand footer-brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня" loading="lazy"></a>
       <p class="footer-address">г. Новоозёрск<br>ул. Таёжная, д. 3, офис 2</p>
-      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a></div>
+      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a><div class="footer-socials"><a href="https://t.me/tropa_trips" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://wa.me/79001111131" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
     </div>
-    <div class="footer-bottom"><a class="footer-gear" href="gear.html">Снаряжение</a><a href="privacy.html">Политика конфиденциальности</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
+    <nav class="footer-links" aria-label="Разделы сайта"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a></nav>
+    <div class="footer-bottom"><a href="privacy.html">Политика конфиденциальности</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
   </footer>
 </body>
 </html>

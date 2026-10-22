@@ -85,7 +85,7 @@
     chapterOffsets.forEach((offset, index) => {
       if (readingPosition >= offset) current = index;
     });
-    number.textContent = `${String(current + 1).padStart(2, "0")} / 06`;
+    number.textContent = `${String(current + 1).padStart(2, "0")} / ${String(chapters.length).padStart(2, "0")}`;
     label.textContent = chapters[current].dataset.stage;
   }
 

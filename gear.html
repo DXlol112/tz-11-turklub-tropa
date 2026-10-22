@@ -21,18 +21,15 @@
   <link rel="stylesheet" href="css/gear.css">
   <script src="js/schedule.js" defer></script>
   <script src="js/gear.js" defer></script>
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body class="gear-page">
   <a class="skip-link" href="#main">Перейти к снаряжению</a>
-  <header class="site-header gear-header">
+  <header class="site-header unified-header">
     <a class="brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня"></a>
-    <nav class="main-nav" aria-label="Главная навигация">
-      <a class="nav-routes" href="trips.html">Маршруты <span aria-hidden="true">↗</span></a>
-      <a href="calendar.html">Календарь</a>
-      <a class="nav-gear" href="gear.html" aria-current="page">Снаряжение</a>
-      <a href="contracts.html">Бронь и контакты</a>
-    </nav>
-    <a class="gear-back" href="index.html"><span aria-hidden="true">←</span> На главную</a>
+    <nav class="main-nav desktop-nav" aria-label="Главная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html" aria-current="page">Снаряжение</a><a href="contacts.html">Бронь и контакты</a></nav>
+    <a class="header-phone" href="tel:+79001111131">+7 (900) 111-11-31</a>
+    <details class="mobile-menu"><summary>Меню</summary><nav class="mobile-nav" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html" aria-current="page">Снаряжение</a><a href="contacts.html">Бронь и контакты</a><a href="tel:+79001111131">+7 (900) 111-11-31</a></nav></details>
   </header>
 
   <main id="main" class="gear-main">
@@ -130,15 +127,27 @@
       </div>
       <div class="fridge-bottom"><span>Снаряжение готово. Осталось выбрать тропу.</span><a href="trips.html">К маршрутам <span aria-hidden="true">↗</span></a></div>
     </div>
+    <details class="photo-credits">
+      <summary>Источники фотографий</summary>
+      <p>Фотографии иллюстрируют типы снаряжения. Они уменьшены и преобразованы в WebP; модели проката могут отличаться.</p>
+      <ul>
+        <li>Спальник: Smack, <a href="https://commons.wikimedia.org/wiki/File:Mummy_bag.jpg">Mummy bag</a> — общественное достояние.</li>
+        <li>Палатка: Paste, <a href="https://commons.wikimedia.org/wiki/File:Dome_tent.JPG">Dome tent</a> — <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>.</li>
+        <li>Снегоступы: Willmcw, <a href="https://commons.wikimedia.org/wiki/File:Atlas_snowshoes.jpg">Atlas snowshoes</a> — общественное достояние.</li>
+        <li>Коврик: Pierrelagrange, <a href="https://commons.wikimedia.org/wiki/File:Self-inflating_mat.jpg">Self-inflating mat</a> — <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</li>
+        <li>Горелка: Gvjekoslav, <a href="https://commons.wikimedia.org/wiki/File:Gas_stove_cooking.jpg">Gas stove cooking</a> — <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</li>
+        <li>Палки: Sarang, <a href="https://commons.wikimedia.org/wiki/File:Retracted_trekking_poles.jpg">Retracted trekking poles</a> — общественное достояние.</li>
+      </ul>
+    </details>
   </main>
-
   <footer class="site-footer">
     <div class="footer-main">
       <a class="brand footer-brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня" loading="lazy"></a>
       <p class="footer-address">г. Новоозёрск<br>ул. Таёжная, д. 3, офис 2</p>
-      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a></div>
+      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a><div class="footer-socials"><a href="https://t.me/tropa_trips" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://wa.me/79001111131" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
     </div>
-    <div class="footer-bottom"><a href="privacy.html">Политика конфиденциальности</a><a class="footer-gear" href="gear.html" aria-current="page">Снаряжение</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
+    <nav class="footer-links" aria-label="Разделы сайта"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html" aria-current="page">Снаряжение</a><a href="contacts.html">Бронь и контакты</a></nav>
+    <div class="footer-bottom"><a href="privacy.html">Политика конфиденциальности</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
   </footer>
 </body>
 </html>

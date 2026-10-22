@@ -135,7 +135,7 @@
     updateCalendarLink();
     // Возврат браузером должен открыть текущий выбор, а не старые параметры входа.
     const returnUrl = new URL(calendarLink.href);
-    returnUrl.pathname = returnUrl.pathname.replace(/calendar\.html$/, "contracts.html");
+    returnUrl.pathname = returnUrl.pathname.replace(/calendar\.html$/, "contacts.html");
     try { history.replaceState(null, "", returnUrl.href); } catch { /* Некоторые file:// окружения запрещают изменение history. */ }
     try {
       const draft = { selectedDate };

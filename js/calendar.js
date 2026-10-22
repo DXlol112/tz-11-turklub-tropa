@@ -29,14 +29,14 @@
     const id = item?.trip_id || filter.value;
     if (data.route(id)) query.set("trip_id", id);
     if (item) query.set("trip_date", item.trip_date);
-    return `contracts.html?${query}`;
+    return `contacts.html?${query}`;
   }
   // Отмена возвращает исходную дату; смена фильтра не меняет черновик формы.
   const backQuery = new URLSearchParams();
   if (data.route(params.get("trip_id"))) backQuery.set("trip_id", params.get("trip_id"));
   backQuery.set("participants", String(count));
   if (selected) backQuery.set("trip_date", selected.trip_date);
-  document.querySelector("#calendar-back").href = `contracts.html?${backQuery}`;
+  document.querySelector("#calendar-back").href = `contacts.html?${backQuery}`;
 
   function hideDetails(restoreFocus = false) {
     closing = true;

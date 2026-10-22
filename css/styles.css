@@ -1,5 +1,5 @@
-@font-face{font-family:Inter;src:url("../fonts/Inter-Variable.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap}
-@font-face{font-family:"Russo One";src:url("../fonts/RussoOne-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url("../fonts/Inter-Variable.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
+@font-face{font-family:"Russo One";src:url("../fonts/RussoOne-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
 :root{--ink:#1f2a30;--muted:#53655f;--blue:#2b6f8f;--paper:#f4f8fa;--red:#b83e32;--line:rgba(40,67,55,.17);--heading:"Russo One",Arial,sans-serif;--body:Inter,Arial,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:36px}

@@ -24,8 +24,12 @@
   }
 
   function applyHash() {
-    difficulty.value = window.location.hash === "#easy" ? "easy" : "all";
-    duration.value = "all";
+    const params = new URLSearchParams(window.location.search);
+    const requestedDifficulty = params.get("difficulty");
+    const requestedDays = params.get("days");
+    difficulty.value = window.location.hash === "#easy" ? "easy"
+      : ["easy", "moderate", "hard"].includes(requestedDifficulty) ? requestedDifficulty : "all";
+    duration.value = ["1", "2", "3"].includes(requestedDays) ? requestedDays : "all";
     applyFilters();
   }
 

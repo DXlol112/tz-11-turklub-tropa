@@ -15,20 +15,23 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Горы и красный флаг турклуба «Тропа»">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-  <link rel="preload" href="fonts/Inter-Variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body class="privacy-page">
   <a class="skip-link" href="#policy">Перейти к тексту политики</a>
-  <header class="site-header privacy-header">
+  <header class="site-header unified-header">
     <a class="brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня"></a>
-    <a class="back-link" href="index.html"><span aria-hidden="true">←</span> На главную</a>
+    <nav class="main-nav desktop-nav" aria-label="Главная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a></nav>
+    <a class="header-phone" href="tel:+79001111131">+7 (900) 111-11-31</a>
+    <details class="mobile-menu"><summary>Меню</summary><nav class="mobile-nav" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a><a href="tel:+79001111131">+7 (900) 111-11-31</a></nav></details>
   </header>
   <main class="privacy-main" id="policy">
     <p class="eyebrow"><span class="small-rule"></span> Турклуб «Тропа»</p>
     <h1>Политика<br>конфиденциальности</h1>
     <p class="privacy-lead">Политика в отношении обработки персональных данных посетителей информационного сайта ООО «Тропа».</p>
-    <div class="policy-meta"><span>Редакция от 21 октября 2026 года</span><span>Информационная версия сайта</span></div>
+    <div class="policy-meta"><span>Редакция от 22 октября 2026 года</span><span>Информационная версия сайта</span></div>
     <aside class="policy-note">Сайт создан в рамках учебного задания ТЗ-11/2026. Наименование организации, реквизиты, адрес, телефон и электронная почта воспроизведены из задания и являются вымышленными. Настоящий документ описывает учебную информационную версию сайта; приём заявок и бронирование через сайт не осуществляются.</aside>
 
     <section class="policy-section" aria-labelledby="general">
@@ -57,7 +60,7 @@
       <p>3.1. Сайт предназначен для ознакомления посетителей с турклубом, маршрутами, стоимостью походов и условиями участия, приведёнными в техническом задании. Просмотр указанных сведений не требует регистрации или предоставления персональных данных.</p>
       <p>3.2. Форма содержит имя, телефон, необязательный e-mail, маршрут, дату выезда, число участников и два флажка согласия. Значения проверяются в браузере. При переходе в календарь создаётся временный черновик в sessionStorage этой вкладки; после восстановления формы запись сразу удаляется. В адресах страниц передаются только маршрут, дата и число участников. Имя, телефон и e-mail в адрес не добавляются и на сервер не отправляются. Оплата и приём заявок не подключены; сведения о здоровье и платёжные реквизиты не запрашиваются.</p>
       <p>3.3. Собственный код сайта не устанавливает cookies, не использует localStorage и не создаёт идентификаторы посетителей. SessionStorage используется только для временного черновика формы при переходе в календарь. Счётчики посещений, рекламные пиксели и события аналитики не подключены. Если браузер запрещает хранилище, сайт сообщает о необходимости повторного заполнения контактных полей.</p>
-      <p>3.4. Шрифты и изображения сайта размещены локально. На странице календаря встроена внешняя карта Яндекса. При её загрузке браузер обращается к серверам Яндекса; виджет может использовать собственные cookies и технические данные на условиях провайдера. Данные полей формы в виджет не передаются. Для iframe установлена политика referrerpolicy="no-referrer". Правила внешнего сервиса доступны в <a href="https://yandex.ru/legal/confidential/" target="_blank" rel="noopener noreferrer">политике Яндекса</a>.</p>
+      <p>3.4. Шрифты, изображения и схема места встречи размещены локально. Внешние виджеты отсутствуют. Ссылки на карту и мессенджеры открывают сторонние сервисы только по действию посетителя; их дальнейшая работа регулируется правилами соответствующих сервисов. Данные полей формы в эти ссылки не передаются.</p>
       <p>3.5. При размещении сайта в сети его загрузка предполагает передачу сетевого запроса серверу. Возможность ведения технических журналов, их состав, основания и сроки хранения зависят от выбранной инфраструктуры размещения. Настоящая Политика не устанавливает и не подтверждает условия работы ещё не выбранного хостинга; они подлежат определению и отражению в Политике до начала соответствующей обработки.</p>
     </section>
 
@@ -100,9 +103,10 @@
     <div class="footer-main">
       <a class="brand footer-brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня" loading="lazy"></a>
       <p class="footer-address">г. Новоозёрск<br>ул. Таёжная, д. 3, офис 2</p>
-      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a></div>
+      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a><div class="footer-socials"><a href="https://t.me/tropa_trips" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://wa.me/79001111131" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
     </div>
-    <div class="footer-bottom"><a class="footer-gear" href="gear.html">Снаряжение</a><a href="privacy.html" aria-current="page">Политика конфиденциальности</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
+    <nav class="footer-links" aria-label="Разделы сайта"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a></nav>
+    <div class="footer-bottom"><a href="privacy.html" aria-current="page">Политика конфиденциальности</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
   </footer>
 </body>
 </html>

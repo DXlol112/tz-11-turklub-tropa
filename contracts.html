@@ -5,181 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#e9ede6">
   <title>Бронь и контакты — турклуб «Тропа»</title>
-  <meta name="description" content="Выберите зимний маршрут турклуба «Тропа», укажите дату и участников, рассчитайте стоимость и свяжитесь с клубом.">
+  <meta name="description" content="Переход на страницу бронирования турклуба «Тропа».">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
-  <meta property="og:title" content="Бронь и контакты — «Тропа»">
-  <meta property="og:description" content="Ваша следующая поездка начинается здесь. Форма бронирования и контакты турклуба «Тропа».">
+  <meta property="og:title" content="Бронь и контакты — турклуб «Тропа»">
+  <meta property="og:description" content="Переход на страницу бронирования турклуба «Тропа».">
   <meta property="og:image" content="img/trips/og-trips.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Пробковая доска с зимними маршрутами турклуба «Тропа»">
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <meta property="og:image:alt" content="Бронь и контакты — турклуб «Тропа»">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/RussoOne-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/trips.css">
-  <link rel="stylesheet" href="css/contracts.css">
-  <script src="js/schedule.js" defer></script>
-  <script src="js/contracts.js" defer></script>
-</head>
-<body class="trips-page contracts-page">
-  <a class="skip-link" href="#main">Перейти к форме бронирования</a>
-  <header class="site-header trips-header">
-    <a class="brand" href="index.html" aria-label="Тропа — главная">
-      <img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня">
-    </a>
-    <nav class="main-nav" aria-label="Главная навигация">
-      <a class="nav-routes" href="trips.html">Маршруты <span aria-hidden="true">↗</span></a>
-      <a href="calendar.html">Календарь</a>
-      <a href="contracts.html" aria-current="page">Бронь и контакты</a>
-      <a class="nav-gear" href="gear.html">Снаряжение</a>
-    </nav>
-    <a class="trips-home" href="trips.html"><span aria-hidden="true">←</span> К маршрутам</a>
-  </header>
-
-  <main class="trips-main" id="main">
-    <div class="trips-forest" aria-hidden="true"></div>
-    <section class="trips-intro" aria-labelledby="trips-title">
-      <p class="eyebrow"><span class="small-rule"></span> Тропа / Бронь и контакты</p>
-      <h1 id="trips-title">До встречи <span>на тропе.</span></h1>
-      <p>Осталось сделать шаг.<br>Заполните форму вашей следующей поездки.</p>
-    </section>
-
-    <div class="trips-scene">
-      <div class="board-companion" aria-hidden="true">
-        <span class="companion-note">Рюкзак готов.<br>А вы?</span>
-        <svg class="board-hiker" viewBox="0 0 130 210" fill="none">
-          <ellipse cx="63" cy="199" rx="48" ry="8" fill="#294236" opacity=".16"/>
-          <g transform="translate(62 180) scale(1.8)">
-            <path d="m-9-20-3 24" stroke="#293e3d" stroke-width="10" stroke-linecap="round"/>
-            <path d="m-13 4-7 2" stroke="#263736" stroke-width="7" stroke-linecap="round"/>
-            <path d="m8-20 6 23" stroke="#293e3d" stroke-width="10" stroke-linecap="round"/>
-            <path d="m14 3 8 1" stroke="#263736" stroke-width="7" stroke-linecap="round"/>
-            <path d="m-16-49-10 25m40-25 12 20 4-8" stroke="#c8bfa2" stroke-width="9" stroke-linecap="round"/>
-            <path d="m-26-23-6 32m60-44 5 44" stroke="#50605a" stroke-width="2" stroke-linecap="round"/>
-            <path d="M-15-52Q1-62 14-52l4 32h-38Z" fill="#d6cbb0"/>
-            <path d="M-3-63v9H8v-9" fill="#c6a68a"/>
-            <g transform="translate(4 -1) rotate(12 0 -68)">
-              <circle cy="-68" r="11" fill="#bb997b"/>
-              <path d="m10-70 3 4-3 2" fill="#bb997b"/>
-              <path d="M-12-66v-5a12 12 0 0 1 24 0v5Z" fill="#d8d4bc"/>
-              <path d="M-13-66h27" stroke="#a6a98d" stroke-width="4" stroke-linecap="round"/>
-            </g>
-            <path d="M-10-57q8-6 16 0" stroke="#823c32" stroke-width="3"/>
-            <rect x="-20" y="-54" width="36" height="39" rx="10" fill="#bd4034"/>
-            <path d="M-18-43h32" stroke="#983a31" stroke-width="2"/>
-            <rect x="-14" y="-36" width="24" height="16" rx="5" fill="#d04b3c"/>
-            <path d="M-12-53v8m20-8v8" stroke="#e9a17e" stroke-width="3"/>
-            <path d="m-22-39-2 16m41-16 2 16" stroke="#8d3c32" stroke-width="5" stroke-linecap="round"/>
-          </g>
-        </svg>
-      </div>
-
-      <section class="route-board" aria-label="Доска бронирования похода">
-        <div class="board-roof" aria-hidden="true"></div>
-        <div class="board-post board-post-left" aria-hidden="true"></div>
-        <div class="board-post board-post-right" aria-hidden="true"></div>
-        <div class="board-cork">
-          <div class="board-heading">
-            <span class="board-caption">Хорошие выходные начинаются здесь</span>
-            <span class="board-season">ЗИМА / 2026—27</span>
-          </div>
-
-          <article class="booking-paper" aria-labelledby="booking-title">
-            <span class="paper-pin" aria-hidden="true"></span>
-            <p class="booking-kicker">Заявка на приключение</p>
-            <h2 id="booking-title">Ваш следующий поход</h2>
-            <p class="booking-lead">Выберите маршрут и укажите участников. Стоимость поездки рассчитается ниже.</p>
-            <form id="booking-form" data-endpoint="" novalidate autocomplete="off">
-              <!-- Первый submit отключён: Enter не отправит данные даже без JavaScript. -->
-              <button type="submit" disabled hidden aria-hidden="true">Отправить</button>
-              <div class="booking-grid">
-                <div class="booking-field booking-wide">
-                  <label for="booking-trip">Маршрут</label>
-                  <select id="booking-trip" name="trip_id" required data-validate aria-describedby="booking-trip-error">
-                    <option value="">Выберите маршрут</option>
-                    <option value="icefalls" data-price="3500">Ледяные водопады</option>
-                    <option value="snowshoes" data-price="2900">Снегоступы для начинающих</option>
-                    <option value="sunrise" data-price="3900">Рассвет на Седой горе</option>
-                    <option value="plateau" data-price="7900">Снежное плато</option>
-                    <option value="traverse" data-price="11500">Лыжный траверс</option>
-                    <option value="newyear_hut" data-price="15900">Новогодняя изба</option>
-                  </select>
-                  <p class="field-error" id="booking-trip-error"></p>
-                </div>
-                <div class="booking-field">
-                  <label for="booking-date">Дата выезда</label>
-                  <input id="booking-date" name="trip_date" type="text" placeholder="Дата не выбрана" readonly required data-validate aria-describedby="booking-date-error">
-                  <a class="choose-date" id="choose-date" href="calendar.html">Выбрать дату <span aria-hidden="true">↗</span></a>
-                  <p class="booking-notice" id="draft-notice" role="status" hidden></p>
-                  <p class="field-error" id="booking-date-error"></p>
-                </div>
-                <div class="booking-field">
-                  <label for="booking-participants">Участники <span>· от 1 до 6</span></label>
-                  <input id="booking-participants" name="participants" type="number" inputmode="numeric" min="1" max="6" step="1" value="1" required data-validate aria-describedby="booking-participants-error">
-                  <p class="field-error" id="booking-participants-error"></p>
-                </div>
-                <div class="booking-field">
-                  <label for="booking-name">Ваше имя</label>
-                  <input id="booking-name" name="name" type="text" minlength="2" maxlength="60" required data-validate aria-describedby="booking-name-error">
-                  <p class="field-error" id="booking-name-error"></p>
-                </div>
-                <div class="booking-field">
-                  <label for="booking-phone">Телефон</label>
-                  <input id="booking-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" maxlength="30" required data-validate aria-describedby="booking-phone-error">
-                  <p class="field-error" id="booking-phone-error"></p>
-                </div>
-                <div class="booking-field booking-wide">
-                  <label for="booking-email">E-mail <span>· необязательно</span></label>
-                  <input id="booking-email" name="email" type="email" maxlength="200" data-validate aria-describedby="booking-email-error">
-                  <p class="field-error" id="booking-email-error"></p>
-                </div>
-              </div>
-              <dl class="booking-total" aria-live="polite" aria-atomic="true">
-                <div class="booking-unit"><dt>Стоимость за участника</dt><dd id="booking-price">—</dd></div>
-                <div><dt>Итого за поход</dt><dd id="booking-sum">—</dd></div>
-                <div><dt>Предоплата · 30 %</dt><dd id="booking-deposit">—</dd></div>
-              </dl>
-              <div class="booking-terms">
-                <p>Аренда личного снаряжения оплачивается отдельно. Расписание и свободные места — учебные; дату необходимо подтвердить у клуба. «Новогодняя изба»: 31.12–02.01.</p>
-                <p>Бронь — после предоплаты 30 %. Отмена за 7 дней — возврат предоплаты.</p>
-                <p>Участники от 18 лет; с 12 лет — в походах «легко» вместе с родителем.</p>
-              </div>
-              <div class="booking-consents">
-                <div>
-                  <label class="booking-check" for="booking-consent"><input id="booking-consent" name="consent" type="checkbox" required data-validate aria-describedby="booking-consent-error"><span>Согласен на обработку персональных данных согласно <a href="privacy.html">политике конфиденциальности</a>.</span></label>
-                  <p class="field-error" id="booking-consent-error"></p>
-                </div>
-                <div>
-                  <label class="booking-check" for="booking-age"><input id="booking-age" name="age_consent" type="checkbox" required data-validate aria-describedby="booking-age-error"><span>Мне есть 18 лет или я иду с родителем</span></label>
-                  <p class="field-error" id="booking-age-error"></p>
-                </div>
-              </div>
-              <button class="booking-submit" id="booking-submit" type="button" disabled>Отправить заявку <span aria-hidden="true">↗</span></button>
-              <p class="booking-notice">Демонстрационная форма. После проверки откроется страница «Спасибо», заявка не будет отправлена. Для бронирования свяжитесь с клубом.</p>
-              <p class="booking-status" id="booking-status" role="status" aria-live="polite" aria-atomic="true"></p>
-              <noscript><p class="booking-notice">Для выбора даты, расчёта и проверки формы включите JavaScript. Расписание и контакты доступны в календаре; отправка отключена.</p></noscript>
-            </form>
-            <div class="booking-contacts" aria-label="Контакты клуба">
-              <div class="booking-contact-links"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a></div>
-              <div class="booking-messengers">
-                <a href="https://t.me/tropa_trips" target="_blank" rel="noopener noreferrer" aria-label="Telegram клуба — в новой вкладке">Telegram <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 10 18-7-4 18-6-6-4 3v-6l10-6-7 8-7-4Z"/></svg></a>
-                <a href="https://wa.me/79001111131" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp клуба — в новой вкладке">WhatsApp <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.5Z"/><path d="M9 7.5 8 9c.6 3.5 2.5 5.4 6 6l1.5-1-2-2-1 1c-1.4-.5-2-1.1-2.5-2.5l1-1-2-2Z"/></svg></a>
-              </div>
-            </div>
-          </article>
-          <div class="board-bottom"><span>До 16 человек в группе</span><span>Хорошие выходные — вместе</span></div>
-        </div>
-      </section>
-    </div>
-  </main>
-
+  <link rel="stylesheet" href="css/not-found.css">
+<meta name="robots" content="noindex, follow"><script src="js/legacy-contacts.js" defer></script>  <link rel="stylesheet" href="css/site.css">
+</head><body class="trips-page">
+  <header class="site-header unified-header">
+    <a class="brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня"></a>
+    <nav class="main-nav desktop-nav" aria-label="Главная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a></nav>
+    <a class="header-phone" href="tel:+79001111131">+7 (900) 111-11-31</a>
+    <details class="mobile-menu"><summary>Меню</summary><nav class="mobile-nav" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a><a href="tel:+79001111131">+7 (900) 111-11-31</a></nav></details>
+  </header><main class="lost-main" id="main"><h1>Бронь и контакты</h1><p>Страница переехала на новый адрес.</p><a class="lost-link" href="contacts.html">Перейти к форме бронирования ↗</a></main>
   <footer class="site-footer">
     <div class="footer-main">
       <a class="brand footer-brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня" loading="lazy"></a>
       <p class="footer-address">г. Новоозёрск<br>ул. Таёжная, д. 3, офис 2</p>
-      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a></div>
+      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a><div class="footer-socials"><a href="https://t.me/tropa_trips" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://wa.me/79001111131" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
     </div>
-    <div class="footer-bottom"><a class="footer-gear" href="gear.html">Снаряжение</a><a href="privacy.html">Политика конфиденциальности</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
-  </footer>
-</body>
-</html>
+    <nav class="footer-links" aria-label="Разделы сайта"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a></nav>
+    <div class="footer-bottom"><a href="privacy.html">Политика конфиденциальности</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
+  </footer></body></html>
