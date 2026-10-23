@@ -56,11 +56,14 @@
     const point = path.getPointAtLength(pathLength * climb);
     const step = staticScene || progress >= .92 ? 0 : Math.sin(climb * Math.PI * 100);
     const size = mobile.matches ? 1.04 : 1;
-    // На узком экране камера держит туриста над областью чтения.
+    // На узком экране справа от карточек остаётся отдельное место для туриста.
+    const cameraX = mobile.matches
+      ? 910 + (scene.clientWidth / 2 - 48) * 1000 / scene.clientHeight - point.x
+      : 0;
     const cameraY = portraitScene && !staticScene
       ? Math.min(0, 200 - point.y) * smooth(0, .12, progress)
       : 0;
-    terrain.setAttribute("transform", `translate(0 ${cameraY.toFixed(2)})`);
+    terrain.setAttribute("transform", `translate(${cameraX.toFixed(2)} ${cameraY.toFixed(2)})`);
     hiker.setAttribute("transform", `translate(${point.x.toFixed(2)} ${point.y.toFixed(2)}) scale(${size})`);
     body.setAttribute("transform", `translate(0 ${(-Math.abs(step) * 1.8).toFixed(2)}) rotate(${(step * 2).toFixed(2)} 0 -25)`);
     leftLeg.setAttribute("transform", `rotate(${(step * 13).toFixed(2)} -9 -20)`);
