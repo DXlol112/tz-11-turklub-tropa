@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" role="img" aria-labelledby="title desc">
+<title id="title">Схема встречи у вокзала</title><desc id="desc">Условный учебный ориентир: главный вход в вокзал, площадь перед ним и место трансфера. Не предназначена для навигации.</desc>
+<rect width="900" height="350" fill="#e9edde"/><path d="M0 70h900M0 83h900" stroke="#a1ac9a" stroke-width="4"/><path d="M0 70h900" stroke="#e9edde" stroke-width="16" stroke-dasharray="3 14"/>
+<path d="M0 287h900" stroke="#c5c7b7" stroke-width="60"/><path d="M0 287h900" stroke="#f8f7eb" stroke-width="2" stroke-dasharray="20 15"/>
+<rect x="300" y="95" width="300" height="85" rx="3" fill="#b8c4b0" stroke="#71856d" stroke-width="2"/><rect x="425" y="149" width="50" height="31" fill="#738871"/>
+<g fill="#2e493c" font-family="Arial,sans-serif" text-anchor="middle"><text x="450" y="130" font-size="23">ВОКЗАЛ</text><text x="450" y="206" font-size="16">Главный вход</text><text x="450" y="328" font-size="15">Площадь перед вокзалом</text></g>
+<path d="M450 220v35h110" stroke="#46694f" stroke-width="3" stroke-dasharray="5 6" fill="none"/>
+<circle cx="450" cy="227" r="9" fill="#b83e32" stroke="#fff" stroke-width="3"/><rect x="570" y="233" width="68" height="29" rx="6" fill="#46694f"/><path d="M583 237v12h40v-12Z" fill="#dce6dc"/><g fill="#354d40"><circle cx="585" cy="265" r="5"/><circle cx="624" cy="265" r="5"/></g>
+<text x="605" y="219" fill="#2e493c" font-family="Arial,sans-serif" text-anchor="middle" font-size="15">Трансфер</text>
+<g fill="#a2b597"><circle cx="230" cy="162" r="30"/><circle cx="210" cy="215" r="23"/><circle cx="686" cy="160" r="30"/><circle cx="720" cy="213" r="22"/></g>
+<text x="450" y="36" fill="#52654b" font-family="Arial,sans-serif" text-anchor="middle" font-size="14">УСЛОВНАЯ СХЕМА · МЕСТО ВСТРЕЧИ УТОЧНЯЕТСЯ</text>
+</svg>

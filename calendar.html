@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e9ede6">
+  <title>Календарь выездов — турклуб «Тропа»</title>
+  <meta name="description" content="Зимние выезды «Тропы» на декабрь 2026 и январь 2027: учебное расписание, свободные места, выбор даты и место сбора.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Календарь выездов — «Тропа»">
+  <meta property="og:description" content="Зимние выезды «Тропы» на декабрь 2026 и январь 2027: учебное расписание, свободные места, выбор даты и место сбора.">
+  <meta property="og:image" content="img/trips/og-trips.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Пробковая доска с зимними маршрутами турклуба «Тропа»">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/trips.css">
+  <link rel="stylesheet" href="css/calendar.css">
+  <script src="js/schedule.js" defer></script>
+  <script src="js/calendar.js" defer></script>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body class="trips-page calendar-page">
+  <a class="skip-link" href="#main">Перейти к календарю</a>
+  <header class="site-header unified-header">
+    <a class="brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня"></a>
+    <nav class="main-nav desktop-nav" aria-label="Главная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html" aria-current="page">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a></nav>
+    <a class="header-phone" href="tel:+79001111131">+7 (900) 111-11-31</a>
+    <details class="mobile-menu"><summary>Меню</summary><nav class="mobile-nav" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html" aria-current="page">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a><a href="tel:+79001111131">+7 (900) 111-11-31</a></nav></details>
+  </header>
+
+  <main class="trips-main" id="main">
+    <div class="trips-forest" aria-hidden="true"></div>
+    <section class="trips-intro" aria-labelledby="trips-title">
+      <p class="eyebrow"><span class="small-rule"></span> Тропа / Календарь выездов</p>
+      <h1 id="trips-title">Выбери день <span>для тропы.</span></h1>
+      <p>Открой календарь — впереди целая зима.<br>Найди время для своего приключения.</p>
+    </section>
+
+    <div class="trips-scene">
+      <div class="board-companion" aria-hidden="true">
+        <span class="companion-note">Когда<br>отправляемся?</span>
+        <svg class="board-hiker" viewBox="0 0 130 210" fill="none">
+          <ellipse cx="63" cy="199" rx="48" ry="8" fill="#294236" opacity=".16"/>
+          <g transform="translate(62 180) scale(1.8)">
+            <path d="m-9-20-3 24" stroke="#293e3d" stroke-width="10" stroke-linecap="round"/>
+            <path d="m-13 4-7 2" stroke="#263736" stroke-width="7" stroke-linecap="round"/>
+            <path d="m8-20 6 23" stroke="#293e3d" stroke-width="10" stroke-linecap="round"/>
+            <path d="m14 3 8 1" stroke="#263736" stroke-width="7" stroke-linecap="round"/>
+            <path d="m-16-49-10 25m40-25 12 20 4-8" stroke="#c8bfa2" stroke-width="9" stroke-linecap="round"/>
+            <path d="m-26-23-6 32m60-44 5 44" stroke="#50605a" stroke-width="2" stroke-linecap="round"/>
+            <path d="M-15-52Q1-62 14-52l4 32h-38Z" fill="#d6cbb0"/>
+            <path d="M-3-63v9H8v-9" fill="#c6a68a"/>
+            <g transform="translate(4 -1) rotate(12 0 -68)">
+              <circle cy="-68" r="11" fill="#bb997b"/>
+              <path d="m10-70 3 4-3 2" fill="#bb997b"/>
+              <path d="M-12-66v-5a12 12 0 0 1 24 0v5Z" fill="#d8d4bc"/>
+              <path d="M-13-66h27" stroke="#a6a98d" stroke-width="4" stroke-linecap="round"/>
+            </g>
+            <path d="M-10-57q8-6 16 0" stroke="#823c32" stroke-width="3"/>
+            <rect x="-20" y="-54" width="36" height="39" rx="10" fill="#bd4034"/>
+            <path d="M-18-43h32" stroke="#983a31" stroke-width="2"/>
+            <rect x="-14" y="-36" width="24" height="16" rx="5" fill="#d04b3c"/>
+            <path d="M-12-53v8m20-8v8" stroke="#e9a17e" stroke-width="3"/>
+            <path d="m-22-39-2 16m41-16 2 16" stroke="#8d3c32" stroke-width="5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+
+      <section class="route-board" aria-label="Доска: Календарь выездов">
+        <div class="board-roof" aria-hidden="true"></div>
+        <div class="board-post board-post-left" aria-hidden="true"></div>
+        <div class="board-post board-post-right" aria-hidden="true"></div>
+        <div class="board-cork">
+          <div class="board-heading">
+            <span class="board-caption">Хорошие выходные начинаются здесь</span>
+            <span class="board-season">ЗИМА / 2026—27</span>
+          </div>
+
+          <article class="calendar-paper" aria-label="Календарь зимних выездов">
+            <span class="paper-pin" aria-hidden="true"></span>
+            <div id="calendar-app" hidden>
+              <div class="calendar-tools">
+                <div class="calendar-filter"><label for="calendar-route">Маршрут</label><select id="calendar-route">
+                  <option value="">Все маршруты</option>
+                  <option value="icefalls">Ледяные водопады</option>
+                  <option value="snowshoes">Снегоступы для начинающих</option>
+                  <option value="sunrise">Рассвет на Седой горе</option>
+                  <option value="plateau">Снежное плато</option>
+                  <option value="traverse">Лыжный траверс</option>
+                  <option value="newyear_hut">Новогодняя изба</option>
+                </select></div>
+                <p class="calendar-hint"><strong>Учебное расписание</strong><span id="calendar-count">Выберите день с отметкой.</span></p>
+              </div>
+              <div class="calendar-sheet" id="calendar-sheet">
+                <div class="calendar-monthbar">
+                  <button class="month-arrow" id="month-previous" type="button" aria-label="Предыдущий месяц" disabled>←</button>
+                  <h2 id="calendar-month" aria-live="polite" aria-atomic="true">Декабрь 2026</h2>
+                  <button class="month-arrow" id="month-next" type="button" aria-label="Следующий месяц">→</button>
+                </div>
+                <div class="calendar-week" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+                <div class="calendar-days" id="calendar-days" role="group" aria-labelledby="calendar-month"></div>
+                <section class="day-details" id="day-details" aria-labelledby="day-title" hidden>
+                  <div class="day-heading"><h3 id="day-title"></h3><button type="button" class="day-close" id="day-close" aria-label="Закрыть информацию о выездах">×</button></div>
+                  <div id="day-content"></div>
+                </section>
+              </div>
+              <div class="calendar-legend"><span><i aria-hidden="true"></i>Есть места</span><span><i class="full-dot" aria-hidden="true"></i>Нет нужного числа мест</span></div>
+              <div class="calendar-bottom"><a id="calendar-back" class="calendar-back" href="contacts.html">← Вернуться к форме</a><p>Даты и места необходимо подтвердить у клуба.</p></div>
+            </div>
+            <section class="schedule-fallback" id="schedule-fallback" aria-labelledby="fallback-title">
+              <h2 id="fallback-title">Учебное расписание</h2>
+              <p class="calendar-hint">Декабрь 2026 — январь 2027. Для интерактивного выбора даты включите JavaScript. Стоимость указана за участника.</p>
+              <ul class="schedule-list"><li><h3>Ледяные водопады</h3><p>3 500 ₽ · 1 день · легко</p><ul class="schedule-dates"><li>05.12.2026 — Мест нет; другая дата: 19.12.2026</li><li>19.12.2026 — свободных мест: 6</li><li>09.01.2027 — свободных мест: 12</li><li>23.01.2027 — свободных мест: 4</li></ul></li>
+<li><h3>Снегоступы для начинающих</h3><p>2 900 ₽ · 1 день · легко</p><ul class="schedule-dates"><li>06.12.2026 — Мест нет; другая дата: 20.12.2026</li><li>20.12.2026 — свободных мест: 6</li><li>10.01.2027 — свободных мест: 12</li><li>24.01.2027 — свободных мест: 4</li></ul></li>
+<li><h3>Рассвет на Седой горе</h3><p>3 900 ₽ · 1 день · средне</p><ul class="schedule-dates"><li>12.12.2026 — Мест нет; другая дата: 26.12.2026</li><li>26.12.2026 — свободных мест: 6</li><li>16.01.2027 — свободных мест: 12</li><li>30.01.2027 — свободных мест: 4</li></ul></li>
+<li><h3>Снежное плато</h3><p>7 900 ₽ · 2 дня · средне</p><ul class="schedule-dates"><li>12–13.12.2026 — Мест нет; другая дата: 26–27.12.2026</li><li>26–27.12.2026 — свободных мест: 6</li><li>09–10.01.2027 — свободных мест: 12</li><li>23–24.01.2027 — свободных мест: 4</li></ul></li>
+<li><h3>Лыжный траверс</h3><p>11 500 ₽ · 3 дня · сложно</p><ul class="schedule-dates"><li>04–06.12.2026 — Мест нет; другая дата: 18–20.12.2026</li><li>18–20.12.2026 — свободных мест: 6</li><li>15–17.01.2027 — свободных мест: 12</li><li>29–31.01.2027 — свободных мест: 4</li></ul></li>
+<li><h3>Новогодняя изба</h3><p>15 900 ₽ · 3 дня · легко</p><ul class="schedule-dates"><li>31.12.2026–02.01.2027 — свободных мест: 8</li></ul></li>
+</ul>
+              <a class="calendar-back" href="contacts.html">← Вернуться к форме и контактам</a>
+            </section>
+          </article>
+          <section class="meeting-paper" aria-labelledby="meeting-title">
+            <span class="paper-pin" aria-hidden="true"></span>
+            <div class="meeting-heading"><h2 id="meeting-title">Встречаемся у вокзала</h2><a href="https://yandex.ru/maps/org/zheleznodorozhny_vokzal_perm_2/27410453042/" target="_blank" rel="noopener noreferrer">Открыть Яндекс Карты ↗</a></div>
+            <p>Учебный ориентир: вокзал Пермь-II. Точное место сбора уточняется у клуба. По ТЗ трансфер отправляется от ж/д вокзала.</p>
+            <img class="meeting-map local-map" src="img/meeting-map.svg" width="900" height="350" loading="lazy" alt="Условная схема: встреча перед главным входом в вокзал, трансфер рядом с площадью. Точное место уточняется у клуба.">
+            <p class="map-note">Условная схема, не навигационная карта. Внешняя карта откроется только по ссылке выше. Место встречи уточни по телефону <a href="tel:+79001111131">+7 (900) 111-11-31</a>.</p>
+          </section>
+          <div class="board-bottom"><span>До 16 человек в группе</span><span>Зима / 2026—27</span></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="brand footer-brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня" loading="lazy"></a>
+      <p class="footer-address">г. Новоозёрск<br>ул. Таёжная, д. 3, офис 2</p>
+      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a><div class="footer-socials"><a href="https://t.me/tropa_trips" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://wa.me/79001111131" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
+    </div>
+    <div class="footer-bottom"><a href="privacy.html">Политика конфиденциальности</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
+  </footer>
+</body>
+</html>
