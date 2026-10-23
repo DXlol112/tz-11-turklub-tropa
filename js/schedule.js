@@ -21,7 +21,12 @@
     return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
   };
   const range = item => route(item.trip_id).days === 1 ? formatDate(item.trip_date) : `${formatDate(item.trip_date)} — ${formatDate(endDate(item))}`;
-  const money = value => new Intl.NumberFormat("ru-RU", { style: "currency", currency: "RUB", maximumFractionDigits: 0 }).format(value);
+  // Один форматтер на страницу; создаётся только при первом показе цены.
+  let currency;
+  const money = value => {
+    currency ??= new Intl.NumberFormat("ru-RU", { style: "currency", currency: "RUB", maximumFractionDigits: 0 });
+    return currency.format(value);
+  };
   const nearest = (item, count) => departures.filter(other => other.trip_id === item.trip_id && other.trip_date !== item.trip_date && other.seats_left >= count)
     .sort((a, b) => Math.abs(dateObject(a.trip_date) - dateObject(item.trip_date)) - Math.abs(dateObject(b.trip_date) - dateObject(item.trip_date)) || b.trip_date.localeCompare(a.trip_date))[0];
   window.TropaSchedule = { routes, departures, route, departure, validCount, formatDate, range, money, nearest, draftKey: "tropa.bookingDraft.v1" };

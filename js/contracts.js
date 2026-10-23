@@ -15,15 +15,17 @@
   let proceedWithoutDraft = false;
   const submit = document.querySelector("#booking-submit");
   const status = document.querySelector("#booking-status");
-  const currency = new Intl.NumberFormat("ru-RU", { style: "currency", currency: "RUB", maximumFractionDigits: 0 });
+  const priceOutput = document.querySelector("#booking-price");
+  const sumOutput = document.querySelector("#booking-sum");
+  const depositOutput = document.querySelector("#booking-deposit");
 
   function updateTotal() {
     const price = data.route(trip.value)?.price;
     const count = Number(participants.value);
     const validCount = Number.isInteger(count) && count >= 1 && count <= 6;
-    document.querySelector("#booking-price").textContent = price ? currency.format(price) : "—";
-    document.querySelector("#booking-sum").textContent = price && validCount ? currency.format(price * count) : "—";
-    document.querySelector("#booking-deposit").textContent = price && validCount ? currency.format(price * count * .3) : "—";
+    priceOutput.textContent = price ? data.money(price) : "—";
+    sumOutput.textContent = price && validCount ? data.money(price * count) : "—";
+    depositOutput.textContent = price && validCount ? data.money(price * count * .3) : "—";
   }
 
   function dateError() {
@@ -156,7 +158,8 @@
   });
   submit.addEventListener("click", checkForm);
   window.addEventListener("pageshow", event => {
-    if (event.persisted) restoreDraft();
+    if (!event.persisted) return;
+    restoreDraft();
     updateTotal();
     updateCalendarLink();
   });

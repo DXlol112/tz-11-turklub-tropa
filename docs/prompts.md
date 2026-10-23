@@ -98,3 +98,12 @@ trips.html:
 
 ## Исправления сайта
 
+### 7. Оптимизация контактов по PageSpeed Insights
+
+#### Исходный запрос — дословно
+
+```text
+https://pagespeed.web.dev/analysis/https-turklub-tropa-vercel-app-contacts-html/4ru9zrxfjz?form_factor=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=agentic-browsing&hl=ru&utm_source=lh-chrome-ext
+
+Исправь проблемы, из отчёта по ссылке, в тз в пдф, есть ограничение по файлам, и по структуре
+```
