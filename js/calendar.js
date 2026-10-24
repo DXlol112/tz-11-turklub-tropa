@@ -1,4 +1,4 @@
-/* Выбор выезда без отправки заявки и без отслеживания посетителя. */
+/* Календарь и выбор выезда. */
 (() => {
   "use strict";
   const data = window.TropaSchedule;
@@ -76,6 +76,12 @@
       if (available) {
         const link = element("a", "Выбрать этот выезд ↗", "departure-select");
         link.href = formUrl(item);
+        link.dataset.event = "date_select cta_click";
+        link.dataset.tripId = item.trip_id;
+        link.dataset.tripDate = item.trip_date;
+        link.dataset.seatsLeft = item.seats_left;
+        link.dataset.buttonName = "select_departure";
+        link.dataset.pageSection = "calendar";
         card.append(link);
       } else {
         const other = data.nearest(item, count);

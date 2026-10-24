@@ -30,14 +30,15 @@
   <link rel="stylesheet" href="css/trips.css">
   <link rel="stylesheet" href="css/guides.css">
   <link rel="stylesheet" href="css/site.css">
+  <script src="js/analytics.js" defer></script>
 </head>
 <body class="trips-page guides-page">
   <a class="skip-link" href="#main">Перейти к инструкторам</a>
   <header class="site-header unified-header">
     <a class="brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня"></a>
     <nav class="main-nav desktop-nav" aria-label="Главная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html" aria-current="page">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a></nav>
-    <a class="header-phone" href="tel:+79001111131">+7 (900) 111-11-31</a>
-    <details class="mobile-menu"><summary>Меню</summary><nav class="mobile-nav" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html" aria-current="page">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a><a href="tel:+79001111131">+7 (900) 111-11-31</a></nav></details>
+    <a class="header-phone" href="tel:+79001111131" data-event="contact_click" data-contact-type="phone">+7 (900) 111-11-31</a>
+    <details class="mobile-menu"><summary>Меню</summary><nav class="mobile-nav" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html">Календарь</a><a href="guides.html" aria-current="page">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a><a href="tel:+79001111131" data-event="contact_click" data-contact-type="phone">+7 (900) 111-11-31</a></nav></details>
   </header>
   <main class="trips-main" id="main">
     <div class="trips-forest" aria-hidden="true"></div>
@@ -52,7 +53,7 @@
         <div class="board-post board-post-left" aria-hidden="true"></div><div class="board-post board-post-right" aria-hidden="true"></div>
         <div class="board-cork">
           <div class="board-heading"><span class="board-caption">Хорошая компания — половина пути</span><span class="board-season">КОМАНДА / ТРОПА</span></div>
-          <div class="trip-papers guide-papers"><article class="trip-paper guide-paper" id="anna" aria-labelledby="anna-name">
+          <div class="trip-papers guide-papers"><article class="trip-paper guide-paper" id="anna" data-event="guide_view" data-guide-id="anna" aria-labelledby="anna-name">
   <span class="paper-pin" aria-hidden="true"></span>
   <div class="paper-topline"><span>Инструктор 01</span><span>ТРОПА</span></div>
   <figure class="trip-photo"><img class="photo-anna" src="img/guides/anna.webp" width="800" height="600" alt="Туристка с рюкзаком на фоне гор; фотоиллюстрация" fetchpriority="high"><figcaption>Фотоиллюстрация</figcaption></figure>
@@ -60,7 +61,7 @@
   <div class="guide-facts"><strong>6 лет</strong><span>опыта в походах</span></div>
   <h3>Подготовка</h3><p>Сопровождение пеших групп, навигация и первая помощь.</p><p>Поможет найти свой темп на первой тропе. Любит лесные маршруты, короткие привалы и разговоры за горячим чаем.</p>
   <a class="booking-placeholder" href="trips.html">Выбрать маршрут <span aria-hidden="true">↗</span></a>
-</article><article class="trip-paper guide-paper" id="mikhail" aria-labelledby="mikhail-name">
+</article><article class="trip-paper guide-paper" id="mikhail" data-event="guide_view" data-guide-id="mikhail" aria-labelledby="mikhail-name">
   <span class="paper-pin" aria-hidden="true"></span>
   <div class="paper-topline"><span>Инструктор 02</span><span>ТРОПА</span></div>
   <figure class="trip-photo"><img class="photo-mikhail" src="img/guides/mikhail.webp" width="800" height="600" alt="Турист с рюкзаком на фоне горного леса; фотоиллюстрация" loading="lazy" decoding="async"><figcaption>Фотоиллюстрация</figcaption></figure>
@@ -68,7 +69,7 @@
   <div class="guide-facts"><strong>8 лет</strong><span>опыта в походах</span></div>
   <h3>Подготовка</h3><p>Сопровождение лыжных групп, зимняя навигация и первая помощь.</p><p>Объяснит, как распределить силы на длинном переходе и подготовиться к зимнему маршруту. Ценит спокойный ритм и внимание к группе.</p>
   <a class="booking-placeholder" href="trips.html">Выбрать маршрут <span aria-hidden="true">↗</span></a>
-</article><article class="trip-paper guide-paper" id="elena" aria-labelledby="elena-name">
+</article><article class="trip-paper guide-paper" id="elena" data-event="guide_view" data-guide-id="elena" aria-labelledby="elena-name">
   <span class="paper-pin" aria-hidden="true"></span>
   <div class="paper-topline"><span>Инструктор 03</span><span>ТРОПА</span></div>
   <figure class="trip-photo"><img class="photo-elena" src="img/guides/elena.webp" width="800" height="600" alt="Туристка с треккинговыми палками в лесу; фотоиллюстрация" loading="lazy" decoding="async"><figcaption>Фотоиллюстрация</figcaption></figure>
@@ -87,7 +88,7 @@
     <div class="footer-main">
       <a class="brand footer-brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня" loading="lazy"></a>
       <p class="footer-address">г. Новоозёрск<br>ул. Таёжная, д. 3, офис 2</p>
-      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a><div class="footer-socials"><a href="https://t.me/tropa_trips" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://wa.me/79001111131" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
+      <div class="footer-contacts"><a href="tel:+79001111131" data-event="contact_click" data-contact-type="phone">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example" data-event="contact_click" data-contact-type="email">go@tropa-club.example</a><div class="footer-socials"><a href="https://t.me/tropa_trips" target="_blank" rel="noopener noreferrer" data-event="messenger_click social_click" data-messenger="telegram" data-network="telegram" data-page-section="footer">Telegram ↗</a><a href="https://wa.me/79001111131" target="_blank" rel="noopener noreferrer" data-event="messenger_click social_click" data-messenger="whatsapp" data-network="whatsapp" data-page-section="footer">WhatsApp ↗</a></div></div>
     </div>
     <div class="footer-bottom"><a href="privacy.html">Политика конфиденциальности</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
   </footer>
