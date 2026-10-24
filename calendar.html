@@ -30,14 +30,15 @@
   <script src="js/schedule.js" defer></script>
   <script src="js/calendar.js" defer></script>
   <link rel="stylesheet" href="css/site.css">
+  <script src="js/analytics.js" defer></script>
 </head>
 <body class="trips-page calendar-page">
   <a class="skip-link" href="#main">Перейти к календарю</a>
   <header class="site-header unified-header">
     <a class="brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня"></a>
     <nav class="main-nav desktop-nav" aria-label="Главная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html" aria-current="page">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a></nav>
-    <a class="header-phone" href="tel:+79001111131">+7 (900) 111-11-31</a>
-    <details class="mobile-menu"><summary>Меню</summary><nav class="mobile-nav" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html" aria-current="page">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a><a href="tel:+79001111131">+7 (900) 111-11-31</a></nav></details>
+    <a class="header-phone" href="tel:+79001111131" data-event="contact_click" data-contact-type="phone">+7 (900) 111-11-31</a>
+    <details class="mobile-menu"><summary>Меню</summary><nav class="mobile-nav" aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="trips.html">Маршруты</a><a href="calendar.html" aria-current="page">Календарь</a><a href="guides.html">Инструкторы</a><a href="gear.html">Снаряжение</a><a href="contacts.html">Бронь и контакты</a><a href="tel:+79001111131" data-event="contact_click" data-contact-type="phone">+7 (900) 111-11-31</a></nav></details>
   </header>
 
   <main class="trips-main" id="main">
@@ -134,10 +135,10 @@
           </article>
           <section class="meeting-paper" aria-labelledby="meeting-title">
             <span class="paper-pin" aria-hidden="true"></span>
-            <div class="meeting-heading"><h2 id="meeting-title">Встречаемся у вокзала</h2><a href="https://yandex.ru/maps/org/zheleznodorozhny_vokzal_perm_2/27410453042/" target="_blank" rel="noopener noreferrer">Открыть Яндекс Карты ↗</a></div>
+            <div class="meeting-heading"><h2 id="meeting-title">Встречаемся у вокзала</h2><a data-event="map_open" data-map-service="yandex" href="https://yandex.ru/maps/org/zheleznodorozhny_vokzal_perm_2/27410453042/" target="_blank" rel="noopener noreferrer">Открыть Яндекс Карты ↗</a></div>
             <p>Учебный ориентир: вокзал Пермь-II. Точное место сбора уточняется у клуба. По ТЗ трансфер отправляется от ж/д вокзала.</p>
             <img class="meeting-map local-map" src="img/meeting-map.svg" width="900" height="350" loading="lazy" alt="Условная схема: встреча перед главным входом в вокзал, трансфер рядом с площадью. Точное место уточняется у клуба.">
-            <p class="map-note">Условная схема, не навигационная карта. Внешняя карта откроется только по ссылке выше. Место встречи уточни по телефону <a href="tel:+79001111131">+7 (900) 111-11-31</a>.</p>
+            <p class="map-note">Условная схема, не навигационная карта. Внешняя карта откроется только по ссылке выше. Место встречи уточни по телефону <a href="tel:+79001111131" data-event="contact_click" data-contact-type="phone">+7 (900) 111-11-31</a>.</p>
           </section>
           <div class="board-bottom"><span>До 16 человек в группе</span><span>Зима / 2026—27</span></div>
         </div>
@@ -148,7 +149,7 @@
     <div class="footer-main">
       <a class="brand footer-brand" href="index.html" aria-label="Тропа — главная"><img src="img/logo.svg" width="270" height="62" alt="ТРОПА — походы выходного дня" loading="lazy"></a>
       <p class="footer-address">г. Новоозёрск<br>ул. Таёжная, д. 3, офис 2</p>
-      <div class="footer-contacts"><a href="tel:+79001111131">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example">go@tropa-club.example</a><div class="footer-socials"><a href="https://t.me/tropa_trips" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://wa.me/79001111131" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
+      <div class="footer-contacts"><a href="tel:+79001111131" data-event="contact_click" data-contact-type="phone">+7 (900) 111-11-31</a><a href="mailto:go@tropa-club.example" data-event="contact_click" data-contact-type="email">go@tropa-club.example</a><div class="footer-socials"><a href="https://t.me/tropa_trips" target="_blank" rel="noopener noreferrer" data-event="messenger_click social_click" data-messenger="telegram" data-network="telegram" data-page-section="footer">Telegram ↗</a><a href="https://wa.me/79001111131" target="_blank" rel="noopener noreferrer" data-event="messenger_click social_click" data-messenger="whatsapp" data-network="whatsapp" data-page-section="footer">WhatsApp ↗</a></div></div>
     </div>
     <div class="footer-bottom"><a href="privacy.html">Политика конфиденциальности</a><span>© 2026 ООО «Тропа»</span><span class="footer-motto">Хорошие выходные начинаются с шага.</span></div>
   </footer>

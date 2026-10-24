@@ -1,4 +1,4 @@
-/* Подбор и альбомы работают в браузере; данные никуда не отправляются. */
+/* Подбор маршрутов и альбомы выездов и инструкторов. */
 (() => {
   'use strict';
 
@@ -69,6 +69,9 @@
     departures.forEach(item => {
       const route = data.route(item.trip_id);
       const card = node('article', '', 'story-card home-paper');
+      card.dataset.event = 'trip_view';
+      card.dataset.tripId = route.id;
+      card.dataset.difficulty = { 'Легко': 'easy', 'Средне': 'moderate', 'Сложно': 'hard' }[route.difficulty];
       card.append(node('p', data.range(item), 'home-date'), node('h3', route.name),
         node('p', `${route.days} ${route.days === 1 ? 'день' : 'дня'} · ${route.difficulty}`),
         node('p', data.money(route.price), 'home-price'),
@@ -77,6 +80,9 @@
         .sort((a, b) => Math.abs(new Date(a.trip_date) - new Date(item.trip_date)) - Math.abs(new Date(b.trip_date) - new Date(item.trip_date)))[0];
       const link = node('a', item.seats_left ? 'Выбрать выезд ↗' : alternative ? `Другая дата: ${data.formatDate(alternative.trip_date)} ↗` : 'Связаться с клубом ↗', 'text-link');
       link.href = alternative ? `contacts.html?${new URLSearchParams({ trip_id: alternative.trip_id, trip_date: alternative.trip_date, participants: '1' })}` : 'contacts.html';
+      link.dataset.event = 'cta_click';
+      link.dataset.buttonName = 'book_departure';
+      link.dataset.pageSection = 'departures';
       card.append(link);
       pages.append(card);
     });
