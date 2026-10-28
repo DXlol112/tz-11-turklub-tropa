@@ -11,6 +11,7 @@
   gtag('config', 'G-W8SQ3LHX0Z');
 </script>
   <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#e9ede6">
   <title>Бронь и контакты — турклуб «Тропа»</title>
@@ -519,7 +520,7 @@ h1 { font-size: 40px; }
 }
   </style>
   <script src="js/schedule.js" defer></script>
-  <script src="js/contracts.js" defer></script>
+  <script src="js/form.js" defer></script>
   <script src="js/analytics.js" defer></script>
 </head>
 <body class="trips-page contracts-page">
@@ -584,9 +585,14 @@ h1 { font-size: 40px; }
             <p class="booking-kicker">Заявка на приключение</p>
             <h2 id="booking-title">Ваш следующий поход</h2>
             <p class="booking-lead">Выберите маршрут и укажите участников. Стоимость поездки рассчитается ниже.</p>
-            <form id="booking-form" data-endpoint="" novalidate autocomplete="off">
+            <form id="booking-form" data-endpoint="https://script.google.com/macros/s/AKfycbwMFbWMKJKJmgEMieL2FwwsRsB0pVavemJStPHGGHzWNslvFrZjk2Gpvl0XdTlqrTuo/exec" novalidate autocomplete="off">
               <!-- Первый submit отключён: Enter не отправит данные даже без JavaScript. -->
               <button type="submit" disabled hidden aria-hidden="true">Отправить</button>
+              <input type="hidden" name="request_id">
+              <input type="hidden" name="utm_source">
+              <input type="hidden" name="utm_medium">
+              <input type="hidden" name="utm_campaign">
+              <input type="hidden" name="utm_content">
               <div class="booking-grid">
                 <div class="booking-field booking-wide">
                   <label for="booking-trip">Маршрут</label>
@@ -650,7 +656,7 @@ h1 { font-size: 40px; }
                 </div>
               </div>
               <button class="booking-submit" id="booking-submit" data-event="cta_click" data-button-name="booking_submit" data-page-section="booking" type="button" disabled>Отправить заявку <span aria-hidden="true">↗</span></button>
-              <p class="booking-notice">Демонстрационная форма. После проверки откроется страница «Спасибо», заявка не будет отправлена. Для бронирования свяжитесь с клубом.</p>
+              <p class="booking-notice">После отправки вы получите номер заявки. Выезд и наличие мест подтвердит клуб.</p>
               <p class="booking-status" id="booking-status" role="status" aria-live="polite" aria-atomic="true"></p>
               <noscript><p class="booking-notice">Для выбора даты, расчёта и проверки формы включите JavaScript. Расписание и контакты доступны в календаре; отправка отключена.</p></noscript>
             </form>

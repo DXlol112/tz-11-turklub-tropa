@@ -1,4 +1,33 @@
-/* Форма работает только в браузере: адрес приёмника пока не задан. */
+/* ТЗ-11/2026: метки сохраняются на всех страницах до отправки формы. */
+(() => {
+  "use strict";
+  const params = new URLSearchParams(window.location.search);
+  const defaults = { utm_source: "direct", utm_medium: "none", utm_campaign: "not_set", utm_content: "not_set" };
+  let saved = {};
+  try { saved = JSON.parse(sessionStorage.getItem("tropa.utm.v1")) || {}; } catch { /* Используем текущий адрес. */ }
+  // Новый размеченный переход заменяет предыдущий источник целиком.
+  const tagged = Object.keys(defaults).some(key => params.has(key));
+  const utm = {};
+  Object.keys(defaults).forEach(key => {
+    const value = tagged ? params.get(key) : saved[key];
+    utm[key] = typeof value === "string" && value.trim() ? value.trim() : defaults[key];
+  });
+  try { sessionStorage.setItem("tropa.utm.v1", JSON.stringify(utm)); } catch { /* Private mode может запретить хранилище. */ }
+  window.TropaUtm = utm;
+
+  const output = document.querySelector("#request-number");
+  if (output) {
+    const id = params.get("request_id") || "";
+    if (/^REQ-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id)) {
+      output.textContent = id;
+      output.setAttribute("aria-label", "Номер заявки " + id);
+      document.querySelector("#request-caption").textContent = "Сохраните номер и назовите его при обращении в клуб.";
+      document.querySelector("#request-notice").textContent = "Спасибо! Ваша заявка отправлена. Свяжитесь с клубом для подтверждения выезда.";
+    }
+  }
+})();
+
+/* Существующий интерфейс выбора маршрута, календаря и расчёта стоимости. */
 (() => {
   "use strict";
 
@@ -18,6 +47,13 @@
   const priceOutput = document.querySelector("#booking-price");
   const sumOutput = document.querySelector("#booking-sum");
   const depositOutput = document.querySelector("#booking-deposit");
+  const requestField = form.elements.request_id;
+  let sending = false;
+  let completed = false;
+  try { requestField.value = sessionStorage.getItem("tropa.pendingRequest.v1") || ""; } catch { /* ID останется в форме. */ }
+  if (!/^REQ-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(requestField.value)) requestField.value = "REQ-" + crypto.randomUUID();
+  try { sessionStorage.setItem("tropa.pendingRequest.v1", requestField.value); } catch { /* Повтор в этой вкладке сохраняет ID. */ }
+  Object.entries(window.TropaUtm).forEach(([key, value]) => { form.elements[key].value = value; });
 
   function updateTotal() {
     const price = data.route(trip.value)?.price;
@@ -89,7 +125,8 @@
     return !message;
   }
 
-  function checkForm() {
+  async function checkForm() {
+    if (sending || completed) return;
     status.textContent = "";
     const invalid = fields.filter(field => !validate(field));
     if (invalid.length) {
@@ -97,9 +134,56 @@
       (invalid[0] === dateField ? calendarLink : invalid[0]).focus();
       return;
     }
-    // Подключение приёмника заявок — отдельный этап. Здесь нет сетевой отправки.
-    clearDraft();
-    window.location.href = "thanks.html";
+    const endpoint = form.dataset.endpoint;
+    if (!/^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec$/.test(endpoint)) {
+      status.textContent = "Приём заявок ещё не подключён. Свяжитесь с клубом по контактам ниже.";
+      return;
+    }
+    const payload = new URLSearchParams(new FormData(form));
+    payload.set("trip_date", selectedDate);
+    payload.set("phone", form.elements.phone.value.replace(/[\s()-]/g, ""));
+    payload.set("name", form.elements.name.value.trim());
+    payload.set("email", form.elements.email.value.trim());
+    sending = true;
+    submit.disabled = true;
+    form.setAttribute("aria-busy", "true");
+    status.textContent = "Отправляем заявку…";
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 45000);
+    try {
+      // URLSearchParams: обычный POST без CORS preflight; ответ JSON обязательно читается.
+      const response = await fetch(endpoint, { method: "POST", body: payload, signal: controller.signal, credentials: "omit", redirect: "follow" });
+      if (!response.ok) throw new Error("Сервис временно недоступен. Повторите попытку с тем же номером заявки.");
+      const result = await response.json();
+      if (result.ok !== true) {
+        const field = fields.find(item => item.name === result.field);
+        if (field) {
+          field.setAttribute("aria-invalid", "true");
+          document.querySelector(`#${field.id}-error`).textContent = result.error || "Проверьте поле.";
+          (field === dateField ? calendarLink : field).focus();
+        }
+        throw new Error(result.error || "Не удалось отправить заявку. Попробуйте ещё раз.");
+      }
+      if (result.request_id !== requestField.value) throw new Error("Приёмник вернул другой номер заявки. Свяжитесь с клубом.");
+      completed = true;
+      document.dispatchEvent(new CustomEvent("booking_result", { detail: {
+        ok: true, trip_id: payload.get("trip_id"), participants: payload.get("participants"), lead_source: payload.get("utm_source")
+      } }));
+      clearDraft();
+      try { sessionStorage.removeItem("tropa.pendingRequest.v1"); } catch { /* Номер уже подтверждён сервером. */ }
+      status.textContent = "Заявка принята. Номер: " + result.request_id;
+      window.location.href = "thanks.html?request_id=" + encodeURIComponent(result.request_id);
+    } catch (error) {
+      status.textContent = error.name === "AbortError" || error instanceof TypeError
+        ? "Подтверждение не получено. Проверьте интернет и повторите отправку с тем же номером: " + requestField.value
+        : error.message;
+      document.dispatchEvent(new CustomEvent("booking_result", { detail: { ok: false } }));
+    } finally {
+      clearTimeout(timeout);
+      sending = false;
+      submit.disabled = completed;
+      form.removeAttribute("aria-busy");
+    }
   }
 
   restoreDraft();

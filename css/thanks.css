@@ -64,7 +64,9 @@
 }
 
 .request-number dd {
-  font-size: 30px;
+  font-size: clamp(14px, 2vw, 21px);
+  min-width: 0;
+  overflow-wrap: anywhere;
   margin: 0 auto 0 0;
   line-height: 1;
 }
