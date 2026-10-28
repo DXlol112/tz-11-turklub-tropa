@@ -6,9 +6,9 @@
 // 6. form_submit — автоматически собирает GA4.
 
 // 7. generate_lead — подтверждённая сервером заявка.
-// Будущий приёмник должен передать свой ответ через событие booking_result.
+// form.js передаёт только подтверждённый ответ приёмника через booking_result.
 document.addEventListener("booking_result", event => {
-  if (event.detail.ok !== true) return;
+  if (event.detail.ok !== true || typeof gtag !== "function") return;
   gtag("event", "generate_lead", {
     lead_trip_id: event.detail.trip_id.slice(0, 100),
     participants: Number(event.detail.participants),
@@ -143,7 +143,7 @@ document.addEventListener("click", event => {
     });
   }
   document.addEventListener("booking_result", event => {
-    if (event.detail.ok === true) return;
+    if (event.detail.ok === true || typeof gtag !== "function") return;
     gtag("event", "form_error", {
       field_name: "booking_form",
       error_type: "server"

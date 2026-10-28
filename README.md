@@ -1,9 +1,9 @@
 # Турклуб «Тропа» — ТЗ-11/2026
 
-Курсовая работа по дисциплине ОП.03 «Информационные технологии», ТЗ № 01/2026.
+Курсовая работа по дисциплине ОП.03 «Информационные технологии», ТЗ-11/2026.
 Исполнитель: Иванов Иван, группа ___.
 
-Сайт кампании «Первая тренировка за 590 ₽»: каждый посетитель приходит
+Сайт зимних походов турклуба «Тропа»: каждый посетитель приходит
 с меткой источника, каждая заявка попадает в Google Таблицу, а руководитель
 видит на дашборде, какой канал приводит клиентов.
 
@@ -13,15 +13,16 @@
 
 | Что | Ссылка |
 |---|---|
-| Сайт | https://___.vercel.app |
-| Таблица заявок | ___ |
+| Сайт | https://dxlol112.github.io/tz-11-turklub-tropa/ |
+| Таблица заявок | [Tropa — Bookings](https://docs.google.com/spreadsheets/d/1S3dj2mVHnYTkhYRlXSbk8RAz_gYbAO4Xotx75UuMREk/edit) |
+| Приёмник Apps Script | [Проект](https://script.google.com/home/projects/1DDz-kRBazCG31Rv9-6BTXJdlNgrb5SwEKc3lFVJsE-PR3ezRwehbJlTd/edit) · [код и подключение](apps-script/README.md) |
 | Дашборд DataLens | ___ |
 | Instagram и Reel с автоответом | ___ |
 | ВКонтакте · Telegram · YouTube | ___ · ___ · ___ |
 | Описание работы | [docs/opisanie.md](docs/opisanie.md) |
 | Презентация к защите | [presentation/zashchita.pdf](presentation/zashchita.pdf) |
 
-Ресурс GA4: `G-___`. Доступ Viewer к ресурсу GA4 выдан: ___ (e-mail Заказчика).
+Ресурс GA4: `G-W8SQ3LHX0Z`. Доступ Viewer к ресурсу GA4 выдан: ___ (e-mail Заказчика).
 
 ## Что сделано
 
@@ -44,14 +45,42 @@ ManyChat · Yandex DataLens · GitHub и Vercel. Сайт создан с пом
 
 ```text
 index.html …         страницы сайта
+robots.txt           запрет обхода поисковыми роботами
 js/analytics.js      все события GA4
+js/form.js           UTM, отправка формы, номер заявки
 apps-script/Code.gs  приёмник заявок
 docs/                описание, реестр UTM, события, записка, схема
 screens/             кадры-доказательства по разделам ТЗ
 presentation/        презентация к защите
 ```
 
+## Поисковые роботы
+
+В `robots.txt` задан запрет обхода всего сайта: `User-agent: *`, `Disallow: /`.
+На всех 9 HTML-страницах, включая `404.html`, установлен метатег
+`robots` со значением `noindex, nofollow`.
+
+`robots.txt` действует только по адресу `/robots.txt` в корне домена.
+Для GitHub Pages по адресу `dxlol112.github.io/tz-11-turklub-tropa/`
+файл из этого проекта окажется в подкаталоге и не будет управлять обходом.
+Для запрета обхода этого проекта нужно добавить в корневой `robots.txt`
+репозитория `dxlol112.github.io` правило для всех роботов:
+
+```text
+User-agent: *
+Disallow: /tz-11-turklub-tropa/
+```
+
+Метатеги работают и в подкаталоге, когда робот загружает страницу.
+При запрете обхода робот не увидит `noindex`, поэтому уже известные поисковику
+адреса могут остаться в выдаче. Эти правила соблюдаются добровольно и не
+блокируют запросы ботов, которые их игнорируют. Подробнее —
+[в документации Google](https://developers.google.com/search/docs/crawling-indexing/robots/intro).
+
 ## Итог
+
+Проверки приёмника и UTM: `node --test tests/bookings.test.cjs`.
+Apps Script опубликован; адрес `/exec` указан в `data-endpoint` формы в `contacts.html`. Подробности — в [инструкции приёмника](apps-script/README.md).
 
 Не получилось: ___
 Нейросеть использовалась для: ___
