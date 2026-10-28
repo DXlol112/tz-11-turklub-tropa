@@ -13,9 +13,9 @@
 
 | Что | Ссылка |
 |---|---|
-| Сайт | https://dxlol112.github.io/tz-11-turklub-tropa/ |
-| Таблица заявок | [Tropa — Bookings](https://docs.google.com/spreadsheets/d/1S3dj2mVHnYTkhYRlXSbk8RAz_gYbAO4Xotx75UuMREk/edit) |
-| Приёмник Apps Script | [Проект](https://script.google.com/home/projects/1DDz-kRBazCG31Rv9-6BTXJdlNgrb5SwEKc3lFVJsE-PR3ezRwehbJlTd/edit) · [код и подключение](apps-script/README.md) |
+| Сайт | [](https://dxlol112.github.io/tz-11-turklub-tropa/) |
+| Таблица заявок | [Tropa — Bookings](https://docs.google.com/spreadsheets/d/1S3dj2mVHnYTkhYRlXSbk8RAz_gYbAO4Xotx75UuMREk/edit?usp=sharing) |
+| Приёмник Apps Script | [Проект](https://script.google.com/d/1DDz-kRBazCG31Rv9-6BTXJdlNgrb5SwEKc3lFVJsE-PR3ezRwehbJlTd/edit?usp=sharing)|
 | Дашборд DataLens | ___ |
 | Instagram и Reel с автоответом | ___ |
 | ВКонтакте · Telegram · YouTube | ___ · ___ · ___ |
@@ -53,29 +53,6 @@ docs/                описание, реестр UTM, события, зап�
 screens/             кадры-доказательства по разделам ТЗ
 presentation/        презентация к защите
 ```
-
-## Поисковые роботы
-
-В `robots.txt` задан запрет обхода всего сайта: `User-agent: *`, `Disallow: /`.
-На всех 9 HTML-страницах, включая `404.html`, установлен метатег
-`robots` со значением `noindex, nofollow`.
-
-`robots.txt` действует только по адресу `/robots.txt` в корне домена.
-Для GitHub Pages по адресу `dxlol112.github.io/tz-11-turklub-tropa/`
-файл из этого проекта окажется в подкаталоге и не будет управлять обходом.
-Для запрета обхода этого проекта нужно добавить в корневой `robots.txt`
-репозитория `dxlol112.github.io` правило для всех роботов:
-
-```text
-User-agent: *
-Disallow: /tz-11-turklub-tropa/
-```
-
-Метатеги работают и в подкаталоге, когда робот загружает страницу.
-При запрете обхода робот не увидит `noindex`, поэтому уже известные поисковику
-адреса могут остаться в выдаче. Эти правила соблюдаются добровольно и не
-блокируют запросы ботов, которые их игнорируют. Подробнее —
-[в документации Google](https://developers.google.com/search/docs/crawling-indexing/robots/intro).
 
 ## Итог
 
