@@ -33,7 +33,7 @@
 |---|---|
 | Сайт | 8 страниц, статический HTML, Github Pages, Lighthouse: 85/100/100 |
 | GA4 | 20 событий, 7 пользовательских параметров, ключевые: `generate_lead`, `contact_click` `messenger_click`|
-| UTM | ___ ссылок в реестре, публикации в ___ соцсетях, QR на афише |
+| UTM | 12 размещений в реестре: 10 полных ссылок |
 | Заявки | форма → Apps Script → лист `leads`, проверка полей и повторов |
 | Instagram | ManyChat, две ветки: [TG · Winter Trips 2026 · Beginners](https://app.manychat.com/flowPlayerPage?share_hash=5733834_e4e8bcba771a07e83937ef04a083db33ae6b3a67) и [TG · Winter Trips 2026 · Gear](https://app.manychat.com/flowPlayerPage?share_hash=5733834_81e0265bd504eb20c4322c4e45c259a5757e42f0) |
 | Отчёты | Reports, Explore, воронка, путь, дашборд DataLens из трёх вкладок |
@@ -58,7 +58,7 @@ presentation/        презентация к защите
 ## Итог
 
 Не получилось:
-    В связи с тем, что я забанен в Instagram, ипользвал альтарнативы виде тг бота для задания с ManyChat, а также использовал github pages вместо vercel.
+    В связи с тем, что я забанен в Instagram, использовал альтернативы виде тг бота для задания с ManyChat, а также использовал github pages вместо vercel.
 
 Нейросеть использовалась для:
     Создания сайта, создании фото и проверки.
