@@ -1,13 +1,12 @@
-# Описание работы · ТЗ № ___ · «___»
+# Описание работы · ТЗ № 11 · «Сайт турклуба»
 
-**Исполнитель:** ___, группа ___
-**Сайт:** https://___.vercel.app
-**Период проверок:** ___ — ___
+**Исполнитель:** @DXlol112, группа 1
+**Сайт:** [https://dxlol112.github.io/tz-11-turklub-tropa/](https://dxlol112.github.io/tz-11-turklub-tropa/)
 
 ## 1. Задача заказчика
 
-Компания «___» получает заявки из ___, но не знает, какой канал приводит
-клиентов. В ___ было ___ обращений, потеряно ___ (письмо директора в ТЗ).
+Компания «Тропа» получает заявки из Instagram и ВКонтакте, но не знает, какой канал приводит
+клиентов. В сентябре 2026 года было ___ обращений, потеряно 58 (письмо директора в ТЗ).
 Задача — сайт, на котором видно источник каждого посетителя, и одна
 таблица со всеми заявками.
 
@@ -36,52 +35,52 @@ flowchart LR
 
 ## 3. Сайт
 
-Сайт из ___ страниц создан с помощью ___ и доработан вручную: ___.
+Сайт из 8 страниц создан с помощью chatGPT(Astra-6) и доработан вручную: @DXlol112.
 Опубликован на Vercel, обновляется после каждого push.
 
-![Главная страница](../screens/kursovaya/01-site-home.png)
-![Сайт на телефоне, 375 px](../screens/kursovaya/02-site-mobile.png)
-![Lighthouse](../screens/lighthouse/lighthouse-mobile.png)
+![Главная страница](screenshot/01-site-home.png)
+![Сайт на телефоне, 375 px](screenshot/02-site-mobile.png)
+![Lighthouse](screenshot/lighthouse-mobile.png)
 
 ## 4. Аналитика GA4
 
-Настроено ___ событий, из них своих — ___. Ключевые события: ___.
+Настроено 20 событий, из них своих — 14. Ключевые события: `generate_lead`, `contact_click`, `messenger_click`.
 Каждое событие проверено в DebugView.
 
-![События в DebugView](../screens/ga4/generate_lead.png)
-![Пользовательские параметры](../screens/kursovaya/03-custom-definitions.png)
+![События в DebugView](screenshot/generate_lead.png)
+![Пользовательские параметры](screenshot/03-custom-definitions.png)
 
 ## 5. UTM-ссылки и соцсети
 
-В реестре ___ ссылок, опубликованы в ___ (Instagram, ВКонтакте, Telegram,
+В реестре 10 полных ссылок, опубликованы в ___ (Instagram, ВКонтакте, Telegram,
 YouTube), у двух партнёров и на афише с QR-кодом.
 
-![Реестр ссылок](../screens/utm/registry.png)
-![Источники в Traffic acquisition](../screens/utm/traffic-acquisition.png)
+![Реестр ссылок](screenshot/registry.png)
+![Источники в Traffic acquisition](screenshot/traffic-acquisition.png)
 
 ## 6. Заявки
 
 Форма отправляет заявку в Apps Script, тот проверяет поля и записывает
 строку в лист `leads` вместе с метками. Повторная отправка не создаёт дубль.
 
-![Форма на сайте](../screens/kursovaya/04-form.png)
-![Заявка в таблице с метками](../screens/kursovaya/05-lead-in-sheet.png)
+![Форма на сайте](screenshot/04-form.png)
+![Заявка в таблице с метками](screenshot/05-lead-in-sheet.png)
 
 ## 7. Автоответы в Instagram
 
-Комментарий «___» под Reel запускает ответ в комментариях и сообщение
-в Direct с кнопкой на сайт. Вторая ветка — слово «___».
+Комментарий «СНАРЯГА» под Reel запускает ответ в комментариях и сообщение
+в Direct с кнопкой на сайт. Вторая ветка — слово «НОВИЧОК».
 
-![Ответ в комментариях](../screens/instagram/comment-reply.png)
-![Сообщение в Direct с кнопкой](../screens/instagram/dm-button.png)
+![Ответ в комментариях](screenshot/comment-reply.png)
+![Сообщение в Direct с кнопкой](screenshot/dm-button.png)
 
 ## 8. Отчёты и дашборд
 
 Воронка показала наибольшую потерю между ___ и ___ (___ %).
 Больше всего заявок принёс канал ___.
 
-![Воронка в Explore](../screens/explore/funnel-open.png)
-![Дашборд DataLens, вкладка «Кампании»](../screens/datalens/campaigns.png)
+![Воронка в Explore](screenshot/funnel-open.png)
+![Дашборд DataLens, вкладка «Кампании»](screenshot/campaigns.png)
 
 ## 9. Что получил бизнес
 
@@ -96,5 +95,5 @@ YouTube), у двух партнёров и на афише с QR-кодом.
 
 ## 10. Итог
 
-Не получилось: ___
-ИИ использовался для: ___
+Не получилось: использовать Instagram из-за блокировки аккаунта; вместо него использован Telegram-бот для ManyChat, вместо Vercel — GitHub Pages.
+ИИ использовался для: создания сайта, фотографий и проверки.
