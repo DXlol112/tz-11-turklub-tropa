@@ -19,19 +19,18 @@
 |---|---|
 | Сайт | [https://dxlol112.github.io/tz-11-turklub-tropa/](https://dxlol112.github.io/tz-11-turklub-tropa/)|
 | Таблица заявок | [Таблица заявок](https://docs.google.com/spreadsheets/d/1S3dj2mVHnYTkhYRlXSbk8RAz_gYbAO4Xotx75UuMREk/edit?usp=sharing) |
-| Дашборд DataLens | ___ |
+| Дашборд DataLens | [ТРОПА — winter_trips_2026](https://datalens.yandex/oysz5xqc66oq7?_share_link=public) |
 | Instagram и Reel с автоответом(Заменено на тг бота) | [Telegram bot](https://t.me/turklubtropaBot) |
-| ВКонтакте · Telegram · YouTube | ___ · ___ · ___ |
 | Описание работы | [docs/opisanie.md](docs/opisanie.md) |
 | Презентация к защите | [presentation/zashchita.pdf](presentation/zashchita.pdf) |
 
-Ресурс GA4: `G-G-W8SQ3LHX0Z`.
+Ресурс GA4: `G-W8SQ3LHX0Z`.
 
 ## Что сделано
 
 | Часть | Результат |
 |---|---|
-| Сайт | 8 страниц, статический HTML, Github Pages, Lighthouse: 85/100/100 |
+| Сайт | 8 страниц, статический HTML, Github Pages, Lighthouse: 98/100/100 |
 | GA4 | 20 событий, 7 пользовательских параметров, ключевые: `generate_lead`, `contact_click` `messenger_click`|
 | UTM | 12 размещений в реестре: 10 полных ссылок |
 | Заявки | форма → Apps Script → лист `leads`, проверка полей и повторов |
